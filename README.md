@@ -4,7 +4,9 @@ Dated, reproducible rankings of exact written forms **within each entry language
 
 The main count includes the language’s own edition on equal terms. Each edition contributes at most one vote, regardless of repeated senses, parts of speech or etymologies. This measures observed cross-edition coverage, not frequency, quality or importance.
 
-**Private first version.** No public site or release is enabled. The first snapshot is being built from 21 retained Kaikki archives; machine validation reports and measured artifact sizes are added when the build passes. No master dictionary or extension is changed.
+**Private first version.** No public site or release is enabled. The first snapshot contains **21,849,856 exact language/form pairs across 7,072 raw entry-language codes**, from **38,770,932 records in 21 retained Kaikki archives**. All source checks, complete historical EN/VI comparisons, all-row rank/count validation and a byte-identical second full score build passed. See [validation evidence](validation/full-scores.json). No master dictionary or extension is changed.
+
+See [the first snapshot and measured downloads](docs/FIRST-SNAPSHOT.md).
 
 ## Data comes first
 
@@ -23,7 +25,7 @@ The fixed panel is `cs de el en es fr id it ja ko ku ms nl pl pt ru simple th tr
 
 Snapshot assembly is dated **2026-10-23**. English uses the retained **2026-09-02 dump / 2026-09-20 extraction**. Other sources use **October 1–2 dumps / October 16–18 extractions**. Exact per-source dates, retrieval evidence, sizes, SHA-256 and expected language distributions are frozen in [the manifest](manifests/2026-10-23-first.json). Assembly does not make these sources contemporaneous.
 
-Exact identity preserves case, diacritics, Unicode combining sequences, spaces, punctuation and scripts. **No Unicode normalization** is applied. `á` and `a` + combining acute remain distinct; `zh`, `cmn` and `yue` remain distinct. Explicit forms, abbreviations, proper names and symbols count if they are direct entries. Nested translations, interwiki links and nested form lists do not create entries. Explicit `unknown` language tags and unscoped redirects are excluded with diagnostics. Other raw codes, including `mul`, are retained verbatim.
+Exact identity preserves case, diacritics, Unicode combining sequences, spaces, punctuation and scripts. **No Unicode normalization** is applied. `á` and `a` + combining acute remain distinct; `zh`, `cmn` and `yue` remain distinct. Explicit forms, abbreviations, proper names and symbols count if they are direct entries. Nested translations, interwiki links and nested form lists do not create entries. Explicit `unknown` language tags and unscoped redirects are excluded with diagnostics. Other raw codes, including `mul` and the explicit `und` category, are retained verbatim. There are 111 whitespace/nonstandard-code diagnostics; raw code buckets are not a claim of 7,072 standardized natural languages.
 
 Tied rank uses competition ranking: `1 + number of forms in the same language with a strictly larger count` (1, 1, 3). The optional foreign-only comparison excludes only the panel edition with the identical language code; Simple English remains a separate vote as in the previous EN audit. There is no macrolanguage mapping.
 

@@ -1,0 +1,6 @@
+{
+  "bytes": 1213341696,
+  "method": "Two separate full score assemblies from the same frozen presence data; byte-identical SQLite files in the same runtime",
+  "sha256": "c10e6c33235ac973f70ebc9ea277584ff1bcfd1ef8650a4d2eca7eb73a18053a",
+  "status": "passed"
+}

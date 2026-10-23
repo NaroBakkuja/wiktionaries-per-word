@@ -1,0 +1,13 @@
+{
+  "fetched_static_files": 9,
+  "real_static_worker_checks": [
+    "VI exact counts/ranks/foreign values",
+    "EN own-edition count",
+    "French pagination across 2000-row chunk boundary",
+    "French globally reversed word order",
+    "VI prefix search globally sorted",
+    "EN rank order"
+  ],
+  "rendered_browser": false,
+  "status": "passed"
+}

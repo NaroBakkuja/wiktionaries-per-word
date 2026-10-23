@@ -28,6 +28,7 @@ def export(scores,presence,output,web,chunk_size=2000):
         detail=json.loads(report) if report else {};detail.pop('samples',None)
         processing.append(dict(edition=edition,status=status,detail=detail))
     write_json(base/'processing-report.json',processing)
+    source_coverage=[(e,status,json.loads(report).get('languages',{}) if report else {}) for e,status,report in c.execute('SELECT * FROM sources ORDER BY edition')]
     languages=[];globalhash=hashlib.sha256();total=0
     with DeterministicGzip(dl/'full-scores.csv.gz') as allfile, DeterministicGzip(dl/'full-evidence.csv.gz') as alle:
         aw=csv.writer(allfile,lineterminator='\n');aw.writerow(HEADER)
@@ -64,8 +65,8 @@ def export(scores,presence,output,web,chunk_size=2000):
                     er=[code,w,panel[edition],line,records];lw.writerow(er);ew.writerow(er)
             # Per-edition absence means unobserved in a processed extraction, never linguistic absence.
             lm['coverage']=[]
-            for e,status,report in c.execute('SELECT * FROM sources ORDER BY edition'):
-                rr=json.loads(report) if report else {};count=rr.get('languages',{}).get(code) if status=='complete' else None
+            for e,status,language_counts in source_coverage:
+                count=language_counts.get(code) if status=='complete' else None
                 if status=='complete':count=count or 0
                 lm['coverage'].append(dict(edition=e,status=status,entry_records=count))
             write_json(ldir/'index.json',lm);languages.append(lang)

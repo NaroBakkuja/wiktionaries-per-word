@@ -1,0 +1,872 @@
+{
+  "flagged_codes": 111,
+  "policy": "No registry repair, trimming or macrolanguage merge. Unusual nonempty source codes retained exactly; these are raw code buckets, not a claim of 7072 standardized languages.",
+  "rows": [
+    {
+      "flags": [
+        "leading_or_trailing_whitespace",
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": " fr",
+      "words": 1
+    },
+    {
+      "flags": [
+        "leading_or_trailing_whitespace",
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": " oc",
+      "words": 8
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "abai sembuak",
+      "words": 54
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "abai tubu",
+      "words": 5
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "agta de Dinapigue",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "agta de Nagtipunan",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "amami central",
+      "words": 4
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "anauyá",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "ancien catalan",
+      "words": 5
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "ao mongsen",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "a’ou de Bigong",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "a’ou de Hongfeng",
+      "words": 2
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "bisaya de Limbang",
+      "words": 1
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "brabançon",
+      "words": 396
+    },
+    {
+      "flags": [
+        "leading_or_trailing_whitespace",
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "brabançon ",
+      "words": 1
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "bété",
+      "words": 488
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "calabrais centro-méridional",
+      "words": 56
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "catio ancien",
+      "words": 1
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "chaná",
+      "words": 1
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "charrúa",
+      "words": 2
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "chatino de Teojomulco",
+      "words": 2
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "cilentain méridional",
+      "words": 61
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "copallén",
+      "words": 1
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "dalécarlien",
+      "words": 70
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "dongnu de Du’an",
+      "words": 2
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "dusun du Brunéi",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "dusun papar",
+      "words": 2
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "esmeraldeño",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "francique mosellan",
+      "words": 16
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "francique méridional",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "francique rhénan",
+      "words": 171
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "galaïco-portugais",
+      "words": 21
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gallo-italique de Basilicate",
+      "words": 88
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gallo-italique de Sicile",
+      "words": 5985
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gao de Dongkou",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gelao blanc de Diyingshao",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gelao blanc de Judu",
+      "words": 3
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gelao blanc de Moji",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gelao blanc de Niupo",
+      "words": 2
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gelao blanc de Pudi",
+      "words": 10
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gelao blanc de Wantao",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gelao blanc de Yueliangwan",
+      "words": 2
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gelao rouge de Fanpo",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gelao rouge de Longjia",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gelao rouge de Na Khê",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gelao vert de Liangshui",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gelao vert de Qinglong",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gelao vert de Sanchong",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gelao vert de Zhenfeng",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "grec byzantin",
+      "words": 13
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "grec cargésien",
+      "words": 674
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "grec chypriote",
+      "words": 2
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "grec marioupolitain",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "gumuz du Sud",
+      "words": 6
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "güenoa",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "ha em",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "idiom neutral",
+      "words": 25
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "jicaque d’El Palmar",
+      "words": 1
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "kakán",
+      "words": 2
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "kelabit long napir",
+      "words": 4
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "kenyah long anap",
+      "words": 12
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "kenyah long dunin",
+      "words": 4
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "kenyah long san",
+      "words": 9
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "kiptchak mamelouk",
+      "words": 21
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "kumaná",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "lala (Afrique du Sud)",
+      "words": 1
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "lang:col",
+      "words": 1
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "lang:top",
+      "words": 1
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "lazé",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "light warlpiri",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "ma pnaan",
+      "words": 7
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "me’phaa de Huehuetepec",
+      "words": 14
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "me’phaa de Teocuitlapa",
+      "words": 10
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "me’phaa de Zapotitlan Tablas",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "miao de Xiaozhang",
+      "words": 1
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "monégasque",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "moyen japonais",
+      "words": 6
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "moyen môn",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "moyen okinawaïen",
+      "words": 10
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "moyen polonais",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "moyen écossais",
+      "words": 33
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "murut nabaay",
+      "words": 3
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "nanga ira’",
+      "words": 3
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "na’vi",
+      "words": 92
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "newari du Dolakha",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "nunu de Bama",
+      "words": 3
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "orléanais",
+      "words": 2
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "patagón de Bagua",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "patagón de Perico",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "patwin du Sud",
+      "words": 2
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "penan benalui",
+      "words": 40
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "pidgin massachusett",
+      "words": 8
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "sagz-âbâdi",
+      "words": 1
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "solrésol",
+      "words": 5226
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "soltèque",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "tep (Nigeria)",
+      "words": 1
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "tiefo de Nyafogo",
+      "words": 1
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "tsolyáni",
+      "words": 1619
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "vieil okinawaïen",
+      "words": 51
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "vieil écossais",
+      "words": 6
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "vieux balinais",
+      "words": 2
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "vieux brittonique",
+      "words": 2
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "vieux danois",
+      "words": 2
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "vieux norvégien",
+      "words": 9
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "vieux polonais",
+      "words": 31
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "vieux suédois",
+      "words": 3
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "vieux tchèque",
+      "words": 2
+    },
+    {
+      "flags": [
+        "contains_whitespace",
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "volapük classique",
+      "words": 132
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "wañám",
+      "words": 1
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "yurumanguí",
+      "words": 1
+    },
+    {
+      "flags": [
+        "non_ascii_or_non_alphanumeric_hyphen"
+      ],
+      "raw_code": "де",
+      "words": 1
+    }
+  ]
+}

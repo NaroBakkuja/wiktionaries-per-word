@@ -6,7 +6,7 @@ Only top-level fields identify a direct entry. `senses`, `forms`, `translations`
 
 No NFC, NFD, NFKC, trimming, case folding, transliteration, script exclusion or spelling-variant merge changes identity. Unicode scalar order (SQLite UTF-8 BINARY collation) is used for deterministic spelling order, not locale dictionary collation. The JavaScript comparator handles supplementary-plane characters consistently with that order.
 
-`unknown` is an upstream unassigned-language sentinel. Those records have no safely identified entry language and are excluded as a reported class rather than merged into a fictional language. Valid-looking novel, historical, dialect and macrolanguage codes are retained exactly; no ISO registry repair is inferred. `mul` (Translingual) is retained because it is an explicit upstream attribution. A code’s display labels are explanatory source metadata and never its identity.
+`unknown` is an upstream unassigned-language sentinel. Those records have no safely identified entry language and are excluded as a reported class rather than merged into a fictional language. Valid-looking novel, historical, dialect and macrolanguage codes are retained exactly; no ISO registry repair is inferred. `mul` (Translingual) is retained because it is an explicit upstream attribution. A code’s display labels are explanatory source metadata and never its identity. The first snapshot has 111 raw codes with whitespace or nonstandard characters; diagnostics expose these without silently repairing them. The explicit `und` (Undetermined) source category is retained as a labelled raw-code bucket, not represented as an identified natural language. The reported code-bucket total is not a count of standardized or distinct natural languages.
 
 ## Formats
 

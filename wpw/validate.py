@@ -1,5 +1,5 @@
 """Validate archived comparison semantics before accepting the new inclusive snapshot."""
-import argparse,csv,hashlib,json,sqlite3
+import argparse,csv,gzip,hashlib,json,sqlite3
 from pathlib import Path
 from .pipeline import read_json,write_json,sha256,evidence_ids
 
@@ -55,7 +55,7 @@ def scores(database,output):
     report['largest_languages']=[dict(code=l,words=n) for l,n in c.execute('SELECT code,words FROM languages ORDER BY words DESC LIMIT 10')]
     write_json(output,report);c.close();print(json.dumps(report,indent=2))
 
-def samples(database,checkpoints,retained_database,output):
+def samples(database,checkpoints,retained_database,output,english_archive=None):
     # Independent retained raw JSON cross-check. The build itself uses raw archives only.
     source=sqlite3.connect(Path(retained_database).resolve().as_uri()+'?mode=ro&immutable=1',uri=True)
     c=sqlite3.connect(Path(database).resolve().as_uri()+'?mode=ro',uri=True);report=[]
@@ -68,12 +68,26 @@ def samples(database,checkpoints,retained_database,output):
             row=source.execute('SELECT word,lang_code,raw_json FROM entries WHERE edition_id=? AND line_no=?',(e,s['line'])).fetchone();assert row is not None
             obj=json.loads(row[2]);assert (row[0],row[1])==(s['word'],code)==(obj.get('word'),obj.get('lang_code'))
             report.append(dict(edition=e,raw_line=s['line'],word=s['word'],language_code=code,status='matched'))
-    write_json(output,dict(status='passed',samples=len(report),method='Archive-built source samples checked against independently retained original JSON rows; no glosses copied',rows=report))
+    if english_archive:
+        detail=read_json(Path(checkpoints)/'en.json')
+        chosen=sorted(detail['samples'].values(),key=lambda x:x['line'])[:8]
+        if 'vi' in detail['samples']:chosen.append(detail['samples']['vi'])
+        wanted={x['line']:x for x in chosen}
+        with gzip.open(english_archive,'rb') as f:
+            for number,line in enumerate(f,1):
+                if number in wanted:
+                    obj=json.loads(line);sample=wanted[number]
+                    assert (obj['word'],obj['lang_code'])==(sample['word'],sample['lang_code'])
+                    report.append(dict(edition='en',raw_line=number,word=obj['word'],language_code=obj['lang_code'],status='matched'))
+                if number>=max(wanted):break
+    result=dict(status='passed',samples=len(report),method='Archive-built source samples checked against independently retained original JSON rows; no glosses copied',rows=report)
+    if english_archive:result['english_method']='Independently reopened retained English archive; checked earliest language samples and Vietnamese attribution'
+    write_json(output,result)
     source.close();c.close();print('SOURCE SAMPLES PASSED',len(report))
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();s=p.add_subparsers(dest='cmd',required=True)
     a=s.add_parser('legacy');a.add_argument('--database',required=True);a.add_argument('--en-csv',required=True);a.add_argument('--vi-csv',required=True);a.add_argument('--output',required=True)
     a=s.add_parser('scores');a.add_argument('--database',required=True);a.add_argument('--output',required=True)
-    a=s.add_parser('samples');a.add_argument('--database',required=True);a.add_argument('--checkpoints',required=True);a.add_argument('--retained-database',required=True);a.add_argument('--output',required=True)
+    a=s.add_parser('samples');a.add_argument('--database',required=True);a.add_argument('--checkpoints',required=True);a.add_argument('--retained-database',required=True);a.add_argument('--output',required=True);a.add_argument('--english-archive')
     a=vars(p.parse_args());cmd=a.pop('cmd');globals()[cmd](**a)
