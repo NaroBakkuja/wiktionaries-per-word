@@ -1,0 +1,115 @@
+{
+  "adapter_version": "kaikki-jsonl-v1",
+  "browser_rendered": false,
+  "code_files": [
+    {
+      "bytes": 60,
+      "path": ".gitattributes",
+      "sha256": "6b2370de1fd27ca41badab2547966ff414d0e20ff5abef37862aa650e5040ee7"
+    },
+    {
+      "bytes": 78,
+      "path": "package.json",
+      "sha256": "5d7e5f834c30c018b6cfb4f7c6188bba668c6df90dad8f7b96fb4139d969804c"
+    },
+    {
+      "bytes": 219,
+      "path": "pyproject.toml",
+      "sha256": "3cce2eac5f5bf87d0e154ec3072093d517c8e71adef810eed572602abb557002"
+    },
+    {
+      "bytes": 1568,
+      "path": "scripts/build.ps1",
+      "sha256": "6049b8e6f0cd767840ea54a8bfaa6314af4ae745417e600a184bdcb14ff938d2"
+    },
+    {
+      "bytes": 3217,
+      "path": "scripts/package_snapshot.py",
+      "sha256": "97d82c34bd0c7341f45d9a4879922a7d5da312ffaaa58ac0ac0ae445f1e2f1ef"
+    },
+    {
+      "bytes": 2950,
+      "path": "tests/artifact.test.mjs",
+      "sha256": "5b496a70cd1dfc248041f9307af02a62540b674690f51b6ca6972b94d684aa1c"
+    },
+    {
+      "bytes": 1914,
+      "path": "tests/test_export.py",
+      "sha256": "64217ab60bd5f1895dfe3922eabaa46cf403ef6569dd557763d280a5c25b2f78"
+    },
+    {
+      "bytes": 5637,
+      "path": "tests/test_pipeline.py",
+      "sha256": "3968618cd5357c3ce0133bf63c29b9775dd44ea8aa078677f0d1f392a76cddf8"
+    },
+    {
+      "bytes": 3017,
+      "path": "tests/web.test.mjs",
+      "sha256": "bcc0c9c12b117394e3f17d6010b776f77f3b4e77c13f9922fbcb7bc4132e77f2"
+    },
+    {
+      "bytes": 1453,
+      "path": "web/START-HERE.txt",
+      "sha256": "a6fd2c088b13847fe094fff4ee81df29472f0e5421174a5ca7c74358c9f5bda1"
+    },
+    {
+      "bytes": 6870,
+      "path": "web/app.js",
+      "sha256": "dab3629b7df24b14ce89173df78d79ccacbabf9bd6d48b23e25737b91b224866"
+    },
+    {
+      "bytes": 4794,
+      "path": "web/index.html",
+      "sha256": "94c7ca80d1ef0a91b533c608f1c0f7e0112e526471d534710fb595faf6911836"
+    },
+    {
+      "bytes": 918,
+      "path": "web/query.mjs",
+      "sha256": "4150e72c94910ee172ede5d70ce9954fc6d666501ebda553b906a77df3230eff"
+    },
+    {
+      "bytes": 3612,
+      "path": "web/style.css",
+      "sha256": "d50d7a0d100311affc7c52cc017e4d1f43b96d2578096611ff0833c75ecc688d"
+    },
+    {
+      "bytes": 1476,
+      "path": "web/worker.js",
+      "sha256": "c9542a546a6c11b6f5b5887afc4c5b66a0949898e85a2505676109d837d33ea7"
+    },
+    {
+      "bytes": 22,
+      "path": "wpw/__init__.py",
+      "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+    },
+    {
+      "bytes": 7097,
+      "path": "wpw/export.py",
+      "sha256": "100ab2d0cb067ebc231f4b3c81601c8c950b4ea27210c7ad0142755f1fd90225"
+    },
+    {
+      "bytes": 1574,
+      "path": "wpw/inspect.py",
+      "sha256": "95718f39498808fc664ee0be224a858424f83ad45f82effddfbf66fa26a0f6c8"
+    },
+    {
+      "bytes": 11799,
+      "path": "wpw/pipeline.py",
+      "sha256": "0ff460b8327574244fc888fd8830d03c854fad0150072e93227b8df597241442"
+    },
+    {
+      "bytes": 7513,
+      "path": "wpw/validate.py",
+      "sha256": "2ab210c8a53131837aa9e5d768173bf0e9dd32f372b6bb9659413f2e8afe9832"
+    }
+  ],
+  "code_git_commit": "acca915d86fe7f92536ff83323f67425c745619b",
+  "manifest_sha256": "e3b8644ada31320ba24b9bafc097224fb0b1ecab586e5c66da8540b3512583d1",
+  "pipeline_version": "0.1.0",
+  "platform": "Windows",
+  "policy_version": "exact-inclusive-v1",
+  "python": "3.14.7",
+  "snapshot_id": "2026-10-23-first",
+  "sqlite": "3.50.4",
+  "zlib": "1.3.1.zlib-ng"
+}
