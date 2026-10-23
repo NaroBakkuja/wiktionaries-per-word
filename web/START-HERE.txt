@@ -1,0 +1,17 @@
+Wiktionaries per Word — private review bundle
+
+This folder is self-contained: static explorer, all language data, full/per-language downloads, source metadata and verification evidence. Nothing here has been published as a release or a public website.
+
+To view the explorer with Python installed, open a terminal in this folder:
+    python -m http.server 8765 --bind 127.0.0.1
+Then open http://127.0.0.1:8765/ in a browser after the existing browser security hold is resolved. This is a local static file server, not an application backend. A direct file:// double-click cannot reliably load browser modules/workers.
+
+The snapshot downloads are in snapshots/2026-10-23-first/downloads/:
+    full-scores.csv.gz — all exact language/form counts and tied ranks
+    full-evidence.csv.gz — contributing editions and original JSONL line pointers
+    full-scores.sqlite.gz — portable database with scores and provenance
+Language filenames are mapped in snapshots/2026-10-23-first/languages.json.
+
+Read documentation/METHODOLOGY.md and documentation/LICENSE.md. Raw codes and exact spellings are preserved; counts are observed extraction coverage, not frequency. Source dates differ. No public code/data license has been chosen.
+
+artifact-inventory.json contains file checksums. validation/ contains passing machine checks and exact code/runtime provenance. Offline source/worker/DOM checks passed; rendered-browser verification has not been performed.
