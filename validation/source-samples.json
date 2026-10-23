@@ -1,0 +1,1100 @@
+{
+  "english_method": "Independently reopened retained English archive; checked earliest language samples and Vietnamese attribution",
+  "method": "Archive-built source samples checked against independently retained original JSON rows; no glosses copied",
+  "rows": [
+    {
+      "edition": "cs",
+      "language_code": "aa",
+      "raw_line": 83412,
+      "status": "matched",
+      "word": "Yalli"
+    },
+    {
+      "edition": "cs",
+      "language_code": "ee",
+      "raw_line": 99115,
+      "status": "matched",
+      "word": "meɖekuku"
+    },
+    {
+      "edition": "cs",
+      "language_code": "en",
+      "raw_line": 51,
+      "status": "matched",
+      "word": "ty"
+    },
+    {
+      "edition": "cs",
+      "language_code": "ka",
+      "raw_line": 55604,
+      "status": "matched",
+      "word": "ღვინო"
+    },
+    {
+      "edition": "cs",
+      "language_code": "nn",
+      "raw_line": 415,
+      "status": "matched",
+      "word": "fjord"
+    },
+    {
+      "edition": "cs",
+      "language_code": "sk",
+      "raw_line": 20,
+      "status": "matched",
+      "word": "čas"
+    },
+    {
+      "edition": "cs",
+      "language_code": "vi",
+      "raw_line": 9,
+      "status": "matched",
+      "word": "mít"
+    },
+    {
+      "edition": "de",
+      "language_code": "ab",
+      "raw_line": 14921,
+      "status": "matched",
+      "word": "и"
+    },
+    {
+      "edition": "de",
+      "language_code": "en",
+      "raw_line": 4,
+      "status": "matched",
+      "word": "species"
+    },
+    {
+      "edition": "de",
+      "language_code": "kic",
+      "raw_line": 1112487,
+      "status": "matched",
+      "word": "aamoa"
+    },
+    {
+      "edition": "de",
+      "language_code": "nhg",
+      "raw_line": 17794,
+      "status": "matched",
+      "word": "xuchitl"
+    },
+    {
+      "edition": "de",
+      "language_code": "sr",
+      "raw_line": 8356,
+      "status": "matched",
+      "word": "ja"
+    },
+    {
+      "edition": "de",
+      "language_code": "vi",
+      "raw_line": 657,
+      "status": "matched",
+      "word": "一"
+    },
+    {
+      "edition": "el",
+      "language_code": "aa",
+      "raw_line": 221915,
+      "status": "matched",
+      "word": "ni"
+    },
+    {
+      "edition": "el",
+      "language_code": "el",
+      "raw_line": 4,
+      "status": "matched",
+      "word": "λέξη"
+    },
+    {
+      "edition": "el",
+      "language_code": "en",
+      "raw_line": 1,
+      "status": "matched",
+      "word": "Wiktionary"
+    },
+    {
+      "edition": "el",
+      "language_code": "ine-bsl-pro",
+      "raw_line": 1745013,
+      "status": "matched",
+      "word": "*wékeras"
+    },
+    {
+      "edition": "el",
+      "language_code": "nci",
+      "raw_line": 2431,
+      "status": "matched",
+      "word": "Portugal"
+    },
+    {
+      "edition": "el",
+      "language_code": "sl",
+      "raw_line": 1267,
+      "status": "matched",
+      "word": "France"
+    },
+    {
+      "edition": "el",
+      "language_code": "vi",
+      "raw_line": 7199,
+      "status": "matched",
+      "word": "ketchup"
+    },
+    {
+      "edition": "el",
+      "language_code": "zh",
+      "raw_line": 13682,
+      "status": "matched",
+      "word": "蓝色"
+    },
+    {
+      "edition": "es",
+      "language_code": "aa",
+      "raw_line": 3556,
+      "status": "matched",
+      "word": "can"
+    },
+    {
+      "edition": "es",
+      "language_code": "cv",
+      "raw_line": 36993,
+      "status": "matched",
+      "word": "тӗнче"
+    },
+    {
+      "edition": "es",
+      "language_code": "en",
+      "raw_line": 9,
+      "status": "matched",
+      "word": "hiragana"
+    },
+    {
+      "edition": "es",
+      "language_code": "kld",
+      "raw_line": 72211,
+      "status": "matched",
+      "word": "bandaarr"
+    },
+    {
+      "edition": "es",
+      "language_code": "noa",
+      "raw_line": 1003083,
+      "status": "matched",
+      "word": "Emberá-Wounaan"
+    },
+    {
+      "edition": "es",
+      "language_code": "sne",
+      "raw_line": 97085,
+      "status": "matched",
+      "word": "jan"
+    },
+    {
+      "edition": "es",
+      "language_code": "vi",
+      "raw_line": 50,
+      "status": "matched",
+      "word": "katakana"
+    },
+    {
+      "edition": "es",
+      "language_code": "zu",
+      "raw_line": 3056,
+      "status": "matched",
+      "word": "mzifisi"
+    },
+    {
+      "edition": "fr",
+      "language_code": " fr",
+      "raw_line": 5728420,
+      "status": "matched",
+      "word": "Hutin"
+    },
+    {
+      "edition": "fr",
+      "language_code": "ded",
+      "raw_line": 2014826,
+      "status": "matched",
+      "word": "doku"
+    },
+    {
+      "edition": "fr",
+      "language_code": "en",
+      "raw_line": 11,
+      "status": "matched",
+      "word": "manga"
+    },
+    {
+      "edition": "fr",
+      "language_code": "kle",
+      "raw_line": 2688971,
+      "status": "matched",
+      "word": "kau"
+    },
+    {
+      "edition": "fr",
+      "language_code": "nkk",
+      "raw_line": 2101039,
+      "status": "matched",
+      "word": "ura"
+    },
+    {
+      "edition": "fr",
+      "language_code": "tbd",
+      "raw_line": 370517,
+      "status": "matched",
+      "word": "aime"
+    },
+    {
+      "edition": "fr",
+      "language_code": "vi",
+      "raw_line": 218,
+      "status": "matched",
+      "word": "mai"
+    },
+    {
+      "edition": "id",
+      "language_code": "abl",
+      "raw_line": 471,
+      "status": "matched",
+      "word": "buay"
+    },
+    {
+      "edition": "id",
+      "language_code": "btz",
+      "raw_line": 515,
+      "status": "matched",
+      "word": "embah"
+    },
+    {
+      "edition": "id",
+      "language_code": "en",
+      "raw_line": 1,
+      "status": "matched",
+      "word": "recant"
+    },
+    {
+      "edition": "id",
+      "language_code": "ja",
+      "raw_line": 778,
+      "status": "matched",
+      "word": "wake"
+    },
+    {
+      "edition": "id",
+      "language_code": "mrw",
+      "raw_line": 95017,
+      "status": "matched",
+      "word": "kapala"
+    },
+    {
+      "edition": "id",
+      "language_code": "sbx",
+      "raw_line": 437,
+      "status": "matched",
+      "word": "nanga"
+    },
+    {
+      "edition": "id",
+      "language_code": "vi",
+      "raw_line": 2208,
+      "status": "matched",
+      "word": "丁"
+    },
+    {
+      "edition": "id",
+      "language_code": "zh",
+      "raw_line": 2083,
+      "status": "matched",
+      "word": "辞典"
+    },
+    {
+      "edition": "it",
+      "language_code": "aa",
+      "raw_line": 6373,
+      "status": "matched",
+      "word": "heel"
+    },
+    {
+      "edition": "it",
+      "language_code": "dlm",
+      "raw_line": 104316,
+      "status": "matched",
+      "word": "vai"
+    },
+    {
+      "edition": "it",
+      "language_code": "en",
+      "raw_line": 33,
+      "status": "matched",
+      "word": "hacker"
+    },
+    {
+      "edition": "it",
+      "language_code": "ja",
+      "raw_line": 231,
+      "status": "matched",
+      "word": "魚"
+    },
+    {
+      "edition": "it",
+      "language_code": "nd",
+      "raw_line": 3886,
+      "status": "matched",
+      "word": "jo"
+    },
+    {
+      "edition": "it",
+      "language_code": "sjd",
+      "raw_line": 600385,
+      "status": "matched",
+      "word": "са̄хар"
+    },
+    {
+      "edition": "it",
+      "language_code": "vi",
+      "raw_line": 3512,
+      "status": "matched",
+      "word": "tre"
+    },
+    {
+      "edition": "it",
+      "language_code": "zu",
+      "raw_line": 43354,
+      "status": "matched",
+      "word": "Isintaliyane"
+    },
+    {
+      "edition": "ja",
+      "language_code": "aa",
+      "raw_line": 4033,
+      "status": "matched",
+      "word": "en"
+    },
+    {
+      "edition": "ja",
+      "language_code": "de",
+      "raw_line": 176,
+      "status": "matched",
+      "word": "Japan"
+    },
+    {
+      "edition": "ja",
+      "language_code": "en",
+      "raw_line": 35,
+      "status": "matched",
+      "word": "blue"
+    },
+    {
+      "edition": "ja",
+      "language_code": "kkh",
+      "raw_line": 562586,
+      "status": "matched",
+      "word": "ᨾᩦ"
+    },
+    {
+      "edition": "ja",
+      "language_code": "nov",
+      "raw_line": 3459,
+      "status": "matched",
+      "word": "tre"
+    },
+    {
+      "edition": "ja",
+      "language_code": "stp",
+      "raw_line": 380426,
+      "status": "matched",
+      "word": "abion"
+    },
+    {
+      "edition": "ja",
+      "language_code": "vi",
+      "raw_line": 6,
+      "status": "matched",
+      "word": "青"
+    },
+    {
+      "edition": "ja",
+      "language_code": "zun",
+      "raw_line": 495659,
+      "status": "matched",
+      "word": "ton"
+    },
+    {
+      "edition": "ko",
+      "language_code": "aa",
+      "raw_line": 55560,
+      "status": "matched",
+      "word": "addal"
+    },
+    {
+      "edition": "ko",
+      "language_code": "cr",
+      "raw_line": 351635,
+      "status": "matched",
+      "word": "ᐊᑎᒼ"
+    },
+    {
+      "edition": "ko",
+      "language_code": "en",
+      "raw_line": 1065,
+      "status": "matched",
+      "word": "plosive"
+    },
+    {
+      "edition": "ko",
+      "language_code": "hu",
+      "raw_line": 2185,
+      "status": "matched",
+      "word": "forma"
+    },
+    {
+      "edition": "ko",
+      "language_code": "mnc",
+      "raw_line": 2040,
+      "status": "matched",
+      "word": "be"
+    },
+    {
+      "edition": "ko",
+      "language_code": "sk",
+      "raw_line": 3201,
+      "status": "matched",
+      "word": "december"
+    },
+    {
+      "edition": "ko",
+      "language_code": "vi",
+      "raw_line": 2043,
+      "status": "matched",
+      "word": "be"
+    },
+    {
+      "edition": "ko",
+      "language_code": "zu",
+      "raw_line": 14501,
+      "status": "matched",
+      "word": "we"
+    },
+    {
+      "edition": "ku",
+      "language_code": "aa",
+      "raw_line": 1128,
+      "status": "matched",
+      "word": "bad"
+    },
+    {
+      "edition": "ku",
+      "language_code": "crs",
+      "raw_line": 30501,
+      "status": "matched",
+      "word": "delo"
+    },
+    {
+      "edition": "ku",
+      "language_code": "en",
+      "raw_line": 69,
+      "status": "matched",
+      "word": "en"
+    },
+    {
+      "edition": "ku",
+      "language_code": "kjq",
+      "raw_line": 942686,
+      "status": "matched",
+      "word": "tsits"
+    },
+    {
+      "edition": "ku",
+      "language_code": "njm",
+      "raw_line": 237809,
+      "status": "matched",
+      "word": "zu"
+    },
+    {
+      "edition": "ku",
+      "language_code": "tbk",
+      "raw_line": 21493,
+      "status": "matched",
+      "word": "wai"
+    },
+    {
+      "edition": "ku",
+      "language_code": "vi",
+      "raw_line": 344,
+      "status": "matched",
+      "word": "du"
+    },
+    {
+      "edition": "ku",
+      "language_code": "zwa",
+      "raw_line": 647819,
+      "status": "matched",
+      "word": "maj"
+    },
+    {
+      "edition": "ms",
+      "language_code": "aaa",
+      "raw_line": 8887,
+      "status": "matched",
+      "word": "oghumhi"
+    },
+    {
+      "edition": "ms",
+      "language_code": "cwg",
+      "raw_line": 8835,
+      "status": "matched",
+      "word": "eng"
+    },
+    {
+      "edition": "ms",
+      "language_code": "en",
+      "raw_line": 1,
+      "status": "matched",
+      "word": "modem"
+    },
+    {
+      "edition": "ms",
+      "language_code": "kay",
+      "raw_line": 5942,
+      "status": "matched",
+      "word": "meyũ"
+    },
+    {
+      "edition": "ms",
+      "language_code": "mvv",
+      "raw_line": 8822,
+      "status": "matched",
+      "word": "apat"
+    },
+    {
+      "edition": "ms",
+      "language_code": "sm",
+      "raw_line": 16113,
+      "status": "matched",
+      "word": "gagana"
+    },
+    {
+      "edition": "ms",
+      "language_code": "vi",
+      "raw_line": 5,
+      "status": "matched",
+      "word": "modem"
+    },
+    {
+      "edition": "ms",
+      "language_code": "zza",
+      "raw_line": 10365,
+      "status": "matched",
+      "word": "oyo"
+    },
+    {
+      "edition": "nl",
+      "language_code": "aa",
+      "raw_line": 20083,
+      "status": "matched",
+      "word": "Wikipedia"
+    },
+    {
+      "edition": "nl",
+      "language_code": "dif",
+      "raw_line": 206471,
+      "status": "matched",
+      "word": "warrhukathi"
+    },
+    {
+      "edition": "nl",
+      "language_code": "en",
+      "raw_line": 172,
+      "status": "matched",
+      "word": "busybody"
+    },
+    {
+      "edition": "nl",
+      "language_code": "kaa",
+      "raw_line": 1861,
+      "status": "matched",
+      "word": "Ukraina"
+    },
+    {
+      "edition": "nl",
+      "language_code": "nds",
+      "raw_line": 22,
+      "status": "matched",
+      "word": "ja"
+    },
+    {
+      "edition": "nl",
+      "language_code": "srm",
+      "raw_line": 825926,
+      "status": "matched",
+      "word": "puefisonboginati"
+    },
+    {
+      "edition": "nl",
+      "language_code": "vi",
+      "raw_line": 107,
+      "status": "matched",
+      "word": "de"
+    },
+    {
+      "edition": "pl",
+      "language_code": "aa",
+      "raw_line": 602,
+      "status": "matched",
+      "word": "w"
+    },
+    {
+      "edition": "pl",
+      "language_code": "dgo",
+      "raw_line": 929400,
+      "status": "matched",
+      "word": "अत्थरूं"
+    },
+    {
+      "edition": "pl",
+      "language_code": "en",
+      "raw_line": 13,
+      "status": "matched",
+      "word": "dog"
+    },
+    {
+      "edition": "pl",
+      "language_code": "kca-sz",
+      "raw_line": 356508,
+      "status": "matched",
+      "word": "ху"
+    },
+    {
+      "edition": "pl",
+      "language_code": "nhv",
+      "raw_line": 345468,
+      "status": "matched",
+      "word": "kalli"
+    },
+    {
+      "edition": "pl",
+      "language_code": "sn",
+      "raw_line": 11540,
+      "status": "matched",
+      "word": "ona"
+    },
+    {
+      "edition": "pl",
+      "language_code": "vi",
+      "raw_line": 121,
+      "status": "matched",
+      "word": "to"
+    },
+    {
+      "edition": "pt",
+      "language_code": "Adjetivo",
+      "raw_line": 240877,
+      "status": "matched",
+      "word": "terrão"
+    },
+    {
+      "edition": "pt",
+      "language_code": "dar",
+      "raw_line": 21193,
+      "status": "matched",
+      "word": "адам"
+    },
+    {
+      "edition": "pt",
+      "language_code": "en",
+      "raw_line": 44,
+      "status": "matched",
+      "word": "software"
+    },
+    {
+      "edition": "pt",
+      "language_code": "kiv",
+      "raw_line": 2026,
+      "status": "matched",
+      "word": "imbu"
+    },
+    {
+      "edition": "pt",
+      "language_code": "mzn",
+      "raw_line": 23056,
+      "status": "matched",
+      "word": "مصر"
+    },
+    {
+      "edition": "pt",
+      "language_code": "sid",
+      "raw_line": 15654,
+      "status": "matched",
+      "word": "anga"
+    },
+    {
+      "edition": "pt",
+      "language_code": "vi",
+      "raw_line": 301,
+      "status": "matched",
+      "word": "tai"
+    },
+    {
+      "edition": "pt",
+      "language_code": "zin",
+      "raw_line": 36090,
+      "status": "matched",
+      "word": "ahantu"
+    },
+    {
+      "edition": "ru",
+      "language_code": "Cyrl",
+      "raw_line": 4,
+      "status": "matched",
+      "word": "ё"
+    },
+    {
+      "edition": "ru",
+      "language_code": "ckb",
+      "raw_line": 415223,
+      "status": "matched",
+      "word": "باران"
+    },
+    {
+      "edition": "ru",
+      "language_code": "en",
+      "raw_line": 128,
+      "status": "matched",
+      "word": "abuse"
+    },
+    {
+      "edition": "ru",
+      "language_code": "izh",
+      "raw_line": 8510,
+      "status": "matched",
+      "word": "herz"
+    },
+    {
+      "edition": "ru",
+      "language_code": "nhn",
+      "raw_line": 15667,
+      "status": "matched",
+      "word": "atl"
+    },
+    {
+      "edition": "ru",
+      "language_code": "sob",
+      "raw_line": 614512,
+      "status": "matched",
+      "word": "pado"
+    },
+    {
+      "edition": "ru",
+      "language_code": "vi",
+      "raw_line": 5497,
+      "status": "matched",
+      "word": "te"
+    },
+    {
+      "edition": "ru",
+      "language_code": "zpo",
+      "raw_line": 83194,
+      "status": "matched",
+      "word": "nits"
+    },
+    {
+      "edition": "simple",
+      "language_code": "en",
+      "raw_line": 1,
+      "status": "matched",
+      "word": "English"
+    },
+    {
+      "edition": "th",
+      "language_code": "aa",
+      "raw_line": 5692,
+      "status": "matched",
+      "word": "Qatar"
+    },
+    {
+      "edition": "th",
+      "language_code": "en",
+      "raw_line": 53,
+      "status": "matched",
+      "word": "auto"
+    },
+    {
+      "edition": "th",
+      "language_code": "esu",
+      "raw_line": 2321803,
+      "status": "matched",
+      "word": "kalantaassaaq"
+    },
+    {
+      "edition": "th",
+      "language_code": "ko",
+      "raw_line": 273,
+      "status": "matched",
+      "word": "愛"
+    },
+    {
+      "edition": "th",
+      "language_code": "okn",
+      "raw_line": 258801,
+      "status": "matched",
+      "word": "がらし"
+    },
+    {
+      "edition": "th",
+      "language_code": "srm",
+      "raw_line": 2348107,
+      "status": "matched",
+      "word": "bazu"
+    },
+    {
+      "edition": "th",
+      "language_code": "vi",
+      "raw_line": 114,
+      "status": "matched",
+      "word": "a"
+    },
+    {
+      "edition": "th",
+      "language_code": "zza",
+      "raw_line": 1109,
+      "status": "matched",
+      "word": "balcon"
+    },
+    {
+      "edition": "tr",
+      "language_code": "aa",
+      "raw_line": 165952,
+      "status": "matched",
+      "word": "abba"
+    },
+    {
+      "edition": "tr",
+      "language_code": "cv",
+      "raw_line": 8642,
+      "status": "matched",
+      "word": "ут"
+    },
+    {
+      "edition": "tr",
+      "language_code": "en",
+      "raw_line": 162,
+      "status": "matched",
+      "word": "on"
+    },
+    {
+      "edition": "tr",
+      "language_code": "inh",
+      "raw_line": 5779,
+      "status": "matched",
+      "word": "ай"
+    },
+    {
+      "edition": "tr",
+      "language_code": "mr",
+      "raw_line": 116222,
+      "status": "matched",
+      "word": "डाळिंब"
+    },
+    {
+      "edition": "tr",
+      "language_code": "sl",
+      "raw_line": 23,
+      "status": "matched",
+      "word": "koza"
+    },
+    {
+      "edition": "tr",
+      "language_code": "vi",
+      "raw_line": 428,
+      "status": "matched",
+      "word": "tay"
+    },
+    {
+      "edition": "tr",
+      "language_code": "zu",
+      "raw_line": 47210,
+      "status": "matched",
+      "word": "bili"
+    },
+    {
+      "edition": "vi",
+      "language_code": "aa",
+      "raw_line": 59014,
+      "status": "matched",
+      "word": "xin"
+    },
+    {
+      "edition": "vi",
+      "language_code": "cms",
+      "raw_line": 368140,
+      "status": "matched",
+      "word": "𐌍"
+    },
+    {
+      "edition": "vi",
+      "language_code": "en",
+      "raw_line": 6,
+      "status": "matched",
+      "word": "Wiktionary"
+    },
+    {
+      "edition": "vi",
+      "language_code": "jum",
+      "raw_line": 348438,
+      "status": "matched",
+      "word": "Ṇ"
+    },
+    {
+      "edition": "vi",
+      "language_code": "mzt",
+      "raw_line": 846,
+      "status": "matched",
+      "word": "nam"
+    },
+    {
+      "edition": "vi",
+      "language_code": "ssy",
+      "raw_line": 4830,
+      "status": "matched",
+      "word": "abo"
+    },
+    {
+      "edition": "vi",
+      "language_code": "vi",
+      "raw_line": 1,
+      "status": "matched",
+      "word": "trở thành"
+    },
+    {
+      "edition": "vi",
+      "language_code": "zyg",
+      "raw_line": 384816,
+      "status": "matched",
+      "word": "faenz"
+    },
+    {
+      "edition": "zh",
+      "language_code": "aa",
+      "raw_line": 6757,
+      "status": "matched",
+      "word": "sitta"
+    },
+    {
+      "edition": "zh",
+      "language_code": "cps",
+      "raw_line": 748252,
+      "status": "matched",
+      "word": "semana"
+    },
+    {
+      "edition": "zh",
+      "language_code": "en",
+      "raw_line": 32,
+      "status": "matched",
+      "word": "hospital"
+    },
+    {
+      "edition": "zh",
+      "language_code": "kjb",
+      "raw_line": 1346793,
+      "status": "matched",
+      "word": "yax"
+    },
+    {
+      "edition": "zh",
+      "language_code": "njo-jgl",
+      "raw_line": 57829,
+      "status": "matched",
+      "word": "-a"
+    },
+    {
+      "edition": "zh",
+      "language_code": "swi",
+      "raw_line": 7247,
+      "status": "matched",
+      "word": "nix"
+    },
+    {
+      "edition": "zh",
+      "language_code": "vi",
+      "raw_line": 7,
+      "status": "matched",
+      "word": "英語"
+    },
+    {
+      "edition": "zh",
+      "language_code": "zwa",
+      "raw_line": 8251,
+      "status": "matched",
+      "word": "tan"
+    },
+    {
+      "edition": "en",
+      "language_code": "en",
+      "raw_line": 1,
+      "status": "matched",
+      "word": "dictionary"
+    },
+    {
+      "edition": "en",
+      "language_code": "gl",
+      "raw_line": 8,
+      "status": "matched",
+      "word": "free"
+    },
+    {
+      "edition": "en",
+      "language_code": "nds",
+      "raw_line": 9,
+      "status": "matched",
+      "word": "free"
+    },
+    {
+      "edition": "en",
+      "language_code": "la",
+      "raw_line": 11,
+      "status": "matched",
+      "word": "thesaurus"
+    },
+    {
+      "edition": "en",
+      "language_code": "pt",
+      "raw_line": 12,
+      "status": "matched",
+      "word": "thesaurus"
+    },
+    {
+      "edition": "en",
+      "language_code": "sco",
+      "raw_line": 19,
+      "status": "matched",
+      "word": "encyclopaedia"
+    },
+    {
+      "edition": "en",
+      "language_code": "de",
+      "raw_line": 20,
+      "status": "matched",
+      "word": "frei"
+    },
+    {
+      "edition": "en",
+      "language_code": "lb",
+      "raw_line": 21,
+      "status": "matched",
+      "word": "frei"
+    },
+    {
+      "edition": "en",
+      "language_code": "vi",
+      "raw_line": 478,
+      "status": "matched",
+      "word": "A"
+    }
+  ],
+  "samples": 156,
+  "status": "passed"
+}

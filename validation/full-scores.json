@@ -1,0 +1,51 @@
+{
+  "canonical_rows_sha256": "dc0c2c25fed4c12441db868e18e463af83390c286b8e08e1ec086a3d946b7d9b",
+  "languages": 7072,
+  "largest_languages": [
+    {
+      "code": "fr",
+      "words": 2094999
+    },
+    {
+      "code": "en",
+      "words": 1489351
+    },
+    {
+      "code": "it",
+      "words": 1476501
+    },
+    {
+      "code": "es",
+      "words": 1260214
+    },
+    {
+      "code": "de",
+      "words": 1234023
+    },
+    {
+      "code": "ru",
+      "words": 981133
+    },
+    {
+      "code": "la",
+      "words": 899329
+    },
+    {
+      "code": "el",
+      "words": 834518
+    },
+    {
+      "code": "se",
+      "words": 736024
+    },
+    {
+      "code": "nl",
+      "words": 696636
+    }
+  ],
+  "panel": 21,
+  "range_mask_ties_foreign_records": "all rows verified",
+  "sqlite_integrity": "ok",
+  "status": "passed",
+  "words": 21849856
+}

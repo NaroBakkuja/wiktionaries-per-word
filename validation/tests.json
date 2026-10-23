@@ -1,0 +1,9 @@
+{
+  "python_unittest_cases": 7,
+  "python_status": "passed",
+  "node_worker_query_dom_status": "passed",
+  "node_syntax_checks": "passed",
+  "fixture_export_rebuild": "all file hashes matched across two rebuilds",
+  "rendered_browser_verification": "not attempted: existing Smart App/Playwright hold respected",
+  "models_or_paid_api_calls": 0
+}

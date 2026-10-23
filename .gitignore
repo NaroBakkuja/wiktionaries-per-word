@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.local/
+artifacts/
+data/
+*.sqlite*
+*.jsonl.gz
+*.csv.gz
+*.zip
+node_modules/

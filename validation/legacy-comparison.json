@@ -1,0 +1,158 @@
+{
+  "comparisons": {
+    "en": {
+      "comparison_csv_sha256": "3f3c2eb66e5f0ac430a30d4fa7e362b0d299d2f6c0193e83d46c23ed31dabf93",
+      "positive_foreign_words": 846472,
+      "rows_verified": 1489351,
+      "unexpected_observed_forms": 0,
+      "zero_foreign_rows": 642879
+    },
+    "vi": {
+      "comparison_csv_sha256": "7afb49bea1a5a1d40459cfe9c5b3a36e41644af86f3020070d4b20da9ddbb8de",
+      "positive_foreign_words": 78416,
+      "rows_verified": 94478,
+      "unexpected_observed_forms": 0,
+      "zero_foreign_rows": 16062
+    }
+  },
+  "complete_sources": 21,
+  "excluded": {
+    "cs": {
+      "unassigned_language": 2040,
+      "unscoped_redirect": 473
+    },
+    "de": {
+      "unassigned_language": 2186,
+      "unscoped_redirect": 1195
+    },
+    "el": {
+      "unscoped_redirect": 9750
+    },
+    "en": {
+      "unscoped_redirect": 49551
+    },
+    "es": {
+      "unassigned_language": 5,
+      "unscoped_redirect": 1160
+    },
+    "fr": {
+      "unscoped_redirect": 46628
+    },
+    "id": {
+      "unassigned_language": 2188,
+      "unscoped_redirect": 49313
+    },
+    "it": {
+      "unassigned_language": 108,
+      "unscoped_redirect": 4573
+    },
+    "ja": {
+      "unassigned_language": 1014,
+      "unscoped_redirect": 6931
+    },
+    "ko": {
+      "unassigned_language": 45075,
+      "unscoped_redirect": 1970
+    },
+    "ku": {
+      "unassigned_language": 21,
+      "unscoped_redirect": 1349
+    },
+    "ms": {
+      "unassigned_language": 4374,
+      "unscoped_redirect": 157
+    },
+    "nl": {
+      "unassigned_language": 7331,
+      "unscoped_redirect": 71
+    },
+    "pl": {
+      "unassigned_language": 1,
+      "unscoped_redirect": 4817
+    },
+    "pt": {
+      "unassigned_language": 19,
+      "unscoped_redirect": 51
+    },
+    "ru": {
+      "unscoped_redirect": 1002924
+    },
+    "simple": {
+      "unscoped_redirect": 496
+    },
+    "th": {
+      "unassigned_language": 41,
+      "unscoped_redirect": 4996
+    },
+    "tr": {
+      "unassigned_language": 22131,
+      "unscoped_redirect": 6169
+    },
+    "vi": {
+      "unassigned_language": 32144,
+      "unscoped_redirect": 3267
+    },
+    "zh": {
+      "unassigned_language": 1038,
+      "unscoped_redirect": 16378
+    }
+  },
+  "inclusive_vi_sanity": [
+    {
+      "edition_ids": [
+        "cs",
+        "de",
+        "el",
+        "en",
+        "es",
+        "fr",
+        "it",
+        "ja",
+        "ko",
+        "ku",
+        "ms",
+        "nl",
+        "pl",
+        "pt",
+        "ru",
+        "th",
+        "tr",
+        "vi",
+        "zh"
+      ],
+      "foreign_only_count": 18,
+      "inclusive_count": 19,
+      "word": "nước"
+    },
+    {
+      "edition_ids": [
+        "en",
+        "fr",
+        "ja",
+        "ko",
+        "ku",
+        "pl",
+        "th",
+        "vi",
+        "zh"
+      ],
+      "foreign_only_count": 8,
+      "inclusive_count": 9,
+      "word": "công ty"
+    },
+    {
+      "edition_ids": [
+        "en",
+        "th",
+        "vi",
+        "zh"
+      ],
+      "foreign_only_count": 3,
+      "inclusive_count": 4,
+      "word": "công ti"
+    }
+  ],
+  "method": "Exact archived words, foreign-only counts, and contributing editions; no gloss vocabulary imported",
+  "source_records": 38770932,
+  "status": "passed"
+}
