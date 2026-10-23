@@ -17,7 +17,7 @@ Locally staged folder: `D:/Projects/wiktionaries-per-word-data/artifacts/2026-10
 | Vietnamese evidence | `l06277-evidence.csv.gz` | 1,306,995 |
 | English scores | `l01693-scores.csv.gz` | 8,367,168 |
 
-The artifact folder includes a static explorer, full and per-language downloads, frozen source metadata, processing diagnostics, licensing notes and file checksums. The review ZIP is staged alongside it after verification; `validation/delivery.json` records its final size and SHA-256. Large files remain outside Git history. No release upload was performed.
+The artifact folder includes a static explorer, full and per-language downloads, frozen source metadata, processing diagnostics, licensing notes and file checksums. The verified private review ZIP is `wiktionaries-per-word-2026-10-23-first-private.zip`, staged alongside it: **1,209,910,588 bytes**. ZIP integrity passed. `validation/delivery.json` records its SHA-256 and inventory totals. Large files remain outside Git history. No release upload was performed.
 
 ## Retained layers
 

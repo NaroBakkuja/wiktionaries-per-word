@@ -1,0 +1,12 @@
+{
+  "archive": "wiktionaries-per-word-2026-10-23-first-private.zip",
+  "archive_bytes": 1209910588,
+  "archive_sha256": "1f3105464ec495f42081a3c98b4c0dd954bbec1cd3dffc920d0c73d860ea8d30",
+  "artifact_files": 56425,
+  "canonical_rows_sha256": "dc0c2c25fed4c12441db868e18e463af83390c286b8e08e1ec086a3d946b7d9b",
+  "raw_language_codes": 7072,
+  "status": "locally_staged_private_not_published",
+  "uncompressed_staged_bytes": 2497998005,
+  "words": 21849856,
+  "zip_crc_check": "passed"
+}
