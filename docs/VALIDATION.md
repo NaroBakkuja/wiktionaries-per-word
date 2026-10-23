@@ -10,3 +10,9 @@
 Machine-readable reports are saved under `validation/`. The first build passed all 1,489,351 EN and 94,478 VI historical comparisons; all 21,849,856 score rows passed. There are 156 independent source samples, including raw English archive checks. Two complete score database assemblies were byte-identical (1,213,341,696 bytes). Seven Python test cases plus offline JavaScript/DOM checks passed; the export fixture was rebuilt twice with every file hash identical. Raw-data outputs and full inventories remain with the staged artifacts on D:.
 
 Remaining publication work: select a code license, decide and verify the derived-data licensing/attribution approach across source editions, and perform rendered browser review after the existing security hold is resolved by the user. No master dictionary integration is part of this repository build.
+
+## Explorer update
+
+The v2 explorer adds stable paging, page-size preferences, common/recent language choices and fixed language-aware alphabetical indexes. See [the separate validation report](../validation/ui-pagination-v2.json). All 56,406 frozen snapshot files passed SHA-256 checks against the original inventory. Counts, ranks, evidence and original downloads are unchanged. The original private ZIP still contains the original explorer; the unpacked served folder and repository source contain the update.
+
+Checks in the already-open Chrome tab confirmed unchanged scroll position for Next and Previous, including a short final page; page sizes and URLs; Vietnamese prefix search; alphabetical score ties in both directions; full language search; and persistent recent languages. No blocked browser executable was launched, no security settings changed, and the existing server remains on 127.0.0.1:8765.

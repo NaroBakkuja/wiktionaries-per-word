@@ -15,7 +15,7 @@ The universe is the union of every qualifying `(raw language code, exact written
 - Full and per-language **CSV.gz scores**: count, competition tied rank, contributing edition IDs, edition mask, separately named `foreign_only_count`, and raw record count.
 - Full and per-language **CSV.gz evidence**: language, exact word, edition, first raw JSONL line and number of matching raw records. The first line is a reproducible pointer; it is not a claim that only one record exists.
 - **Portable SQLite.gz**: all scores, language labels, explicit source processing states and frozen provenance.
-- A **static HTML explorer** with searchable languages, snapshot selection, exact/prefix word search, global word/count/rank sorting, pagination, evidence details, downloads and bookmarkable URLs.
+- A **static HTML explorer** with common/recent language choices, full language search, snapshot selection, exact/prefix word search, global alphabetical word/count/rank sorting, stable pagination with 25–500 entries per page, evidence details, downloads and bookmarkable URLs.
 
 Large inputs and generated data stay outside Git history. On this machine the source checkout is `D:/Projects/wiktionaries-per-word`; working data, temporary files and checkpoints are `D:/Projects/wiktionaries-per-word-data`. Original October archives remain in their existing D: location. A checksum-verified retained copy of the September English archive is on D:; its original is unchanged.
 
@@ -33,7 +33,7 @@ A complete processing state means the entire retained extraction passed checks. 
 
 ## Rebuild locally
 
-Python 3.11+ standard library; Node 18+ only for offline JavaScript tests. No package installation, paid APIs, models or live data fetches are required.
+Python 3.11+ standard library; Node 18+ with full ICU for display-order indexes and offline JavaScript tests (first UI index build: Node 24.19.0, ICU 78.3). No package installation, paid APIs, models or live data fetches are required.
 
 ```powershell
 $env:TEMP='D:/Projects/wiktionaries-per-word-data/tmp'
@@ -45,6 +45,7 @@ node tests/web.test.mjs
 python -X utf8 -m wpw.pipeline ingest --manifest manifests/2026-10-23-first.json --paths D:/Projects/wiktionaries-per-word-data/paths.json --database D:/Projects/wiktionaries-per-word-data/presence.sqlite --checkpoints D:/Projects/wiktionaries-per-word-data/checkpoints
 python -X utf8 -m wpw.pipeline score --database D:/Projects/wiktionaries-per-word-data/presence.sqlite --output D:/Projects/wiktionaries-per-word-data/scores.sqlite
 python -X utf8 -m wpw.export --scores D:/Projects/wiktionaries-per-word-data/scores.sqlite --presence D:/Projects/wiktionaries-per-word-data/presence.sqlite --output D:/Projects/wiktionaries-per-word-data/artifacts/2026-10-23-first --web web
+node scripts/build_ui_indexes.mjs --root D:/Projects/wiktionaries-per-word-data/artifacts/2026-10-23-first
 ```
 
 `paths.json` maps each panel edition ID to a local `.jsonl` or `.jsonl.gz` path (see [the example](docs/paths.example.json)); it stays outside Git. The first frozen manifest pins gzip bytes. A decompressed JSONL input needs its own manifest checksum and byte size. Source URLs are discovery/provenance links, not an instruction to use whatever bytes they serve today. Keep the original archives: mutable upstream download URLs cannot guarantee historical rebuilds.
@@ -57,6 +58,6 @@ Serve a staged artifact folder with a **local static file server**, then open it
 python -m http.server 8765 --bind 127.0.0.1 --directory D:/Projects/wiktionaries-per-word-data/artifacts/2026-10-23-first
 ```
 
-This serves static files only; there is no application backend. The explorer fetches packaged chunks, never upstream live entries. Direct `file://` loading is not supported by browser module/worker security rules. Browser rendering remains unverified while the existing security hold is in place.
+This serves static files only; there is no application backend. The explorer fetches packaged chunks, never upstream live entries. Direct `file://` loading is not supported by browser module/worker security rules. The UI update was checked in the existing Chrome tab through the supported browser extension. No blocked browser executable was launched. See [the UI validation record](validation/ui-pagination-v2.json).
 
 See [methodology and schema](docs/METHODOLOGY.md), [rebuilding and compatibility](docs/REBUILDING.md), [validation](docs/VALIDATION.md), and [licensing and attribution](LICENSE.md). No public code license or derived-data dedication has been chosen.

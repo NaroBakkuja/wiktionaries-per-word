@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "snapshot": "2026-10-23-first",
+  "ui_version": "explorer-v2",
+  "old_sort": "Unicode scalar word order. Reversing count/rank order also reversed the word tie order.",
+  "new_sort": "Frozen Intl.Collator order for supported exact raw codes; Unicode scalar fallback for unsupported codes and collator-equal exact forms. Count/rank ties always alphabetical ascending.",
+  "page_sizes": [
+    25,
+    50,
+    100,
+    250,
+    500
+  ],
+  "common_language_count": 20,
+  "recent_language_limit": 6,
+  "offline_checks": [
+    "7 Python pipeline/export tests",
+    "Vietnamese alphabet and diacritics",
+    "canonically equivalent forms remain distinct",
+    "Unicode scalar fallback",
+    "six global sorts across page boundaries for Vietnamese, English, French",
+    "all five page sizes",
+    "exact/prefix search",
+    "URL/preference/recent-language state",
+    "viewport preservation, user movement cancellation and stale-response guards",
+    "deterministic index generation"
+  ],
+  "frozen_data": {
+    "files_sha256_verified_unchanged": 56406,
+    "full_downloads_sha256_verified_unchanged": 3,
+    "words": 21849856,
+    "raw_language_codes": 7072,
+    "canonical_rows_sha256": "dc0c2c25fed4c12441db868e18e463af83390c286b8e08e1ec086a3d946b7d9b",
+    "original_private_zip": "unchanged"
+  },
+  "rendered_browser": {
+    "method": "Existing Chrome tab through supported extension; no browser executable launched",
+    "next_scroll_y": [
+      2948,
+      2948
+    ],
+    "previous_scroll_y": [
+      2948,
+      2948
+    ],
+    "short_last_page_scroll_y": [
+      2948,
+      2948
+    ],
+    "short_last_page_rows": 6,
+    "page_size_100_and_reload": "passed",
+    "page_size_preference_without_url_size": "passed: restored 50",
+    "language_search": "7072 options available; Vietnamese and Middle Vietnamese found",
+    "recent_language_after_reload": "vi persisted",
+    "vietnamese_prefix_search": "56 matches for công t; công ty count 9 rank 452, công ti count 4 rank 5788",
+    "alphabetical_count_ties_both_directions": "passed",
+    "original_english_search_restored": true
+  },
+  "server": {
+    "bind": "127.0.0.1",
+    "port": 8765,
+    "pid": 33956,
+    "unchanged": true
+  },
+  "display_indexes": {
+    "version": 1,
+    "rows": 21849856,
+    "languages": 7072,
+    "locale_languages": 160,
+    "unicode_fallback_languages": 6912,
+    "index_bytes": 262198272,
+    "node": "v24.19.0",
+    "icu": "78.3",
+    "snapshots": [
+      "2026-10-23-first"
+    ]
+  },
+  "private_release_published": false
+}

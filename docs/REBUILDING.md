@@ -24,4 +24,10 @@ Source order is the frozen panel. Identity and ordering use raw strings. Score t
 
 The completed build record includes code file hashes, Git revision, Python/SQLite versions and checksums of validation reports. Rebuild archived snapshots using that code revision and original source bytes, not a current upstream download. There is no network updater or scheduled acquisition.
 
-The explorer source is in `web/`. `wpw.export` assembles it with data outside Git. Serve that folder as static files on localhost for review. The browser security hold was respected: source, worker and DOM-contract checks do not count as rendered browser verification. No public hosting, Pages, release or analytics is configured.
+The explorer source is in `web/`. `wpw.export` assembles it with data outside Git. Serve that folder as static files on localhost for review. The original build used source, worker and DOM-contract checks. The later explorer update also passed checks in the existing Chrome tab through the supported browser extension; no blocked browser executable was launched. No public hosting, Pages, release or analytics is configured.
+
+## Display ordering indexes
+
+After `wpw.export`, run `node scripts/build_ui_indexes.mjs --root ARTIFACT_FOLDER`. This reads only frozen word chunks, verifies their hashes and writes display-only row permutations under `ui-indexes/`. It never reprocesses the raw archives or changes snapshot counts, downloads or source metadata. Use the recorded Node/ICU versions for an identical collation rebuild. Unsupported raw codes use Unicode scalar order, explicitly labelled in the explorer. `scripts/build.ps1` performs this step for a new full build.
+
+For an existing served snapshot, update the files from `web/`, generate the supplemental indexes, then run `python scripts/checkpoint_ui.py --root ARTIFACT_FOLDER --checkpoint CHECKPOINT_FOLDER --verify-frozen`. The checkpoint folder must already contain the previous `artifact-inventory.json`; it serves as the immutable baseline. The updater refreshes UI file checksums and adds supplemental index entries while retaining all frozen snapshot file records. It does not repack the original private ZIP. Refresh the browser with Ctrl+F5 after a live UI update.

@@ -22,4 +22,6 @@ python -X utf8 -m wpw.validate scores --database "$targetRoot/scores.sqlite" --o
 if ($LASTEXITCODE -ne 0) { throw "Score validation failed" }
 python -X utf8 -m wpw.export --scores "$targetRoot/scores.sqlite" --presence "$targetRoot/presence.sqlite" --output "$targetRoot/artifacts" --web web
 if ($LASTEXITCODE -ne 0) { throw "Export failed" }
+node scripts/build_ui_indexes.mjs --root "$targetRoot/artifacts"
+if ($LASTEXITCODE -ne 0) { throw "Display ordering index failed" }
 Write-Output "Private artifacts staged at $targetRoot/artifacts. Nothing published."
