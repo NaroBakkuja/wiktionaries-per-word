@@ -1,0 +1,24 @@
+{
+  "canonical_rows_sha256": "dc0c2c25fed4c12441db868e18e463af83390c286b8e08e1ec086a3d946b7d9b",
+  "cc0_legal_text": {
+    "bytes": 7048,
+    "git_blob_sha1": "0e259d42c996742e9e3cba14c677129b2c1b6311",
+    "official_repository": "creativecommons/cc-legal-tools-data",
+    "path": "docs/publicdomain/zero/1.0/legalcode.txt",
+    "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+  },
+  "license_scope": "CC0-1.0 applies only to copyright/related/database rights held by the publisher; upstream notices remain separate",
+  "packaging_code_git_commit": "422a4843fbd14e34269e0fa82e758785fda75e46",
+  "publication_model": "One-time unmaintained snapshot; no support or update commitment",
+  "raw_input_rebuild_for_release": false,
+  "release_tag": "2026-10-23",
+  "snapshot_id": "2026-10-23-first",
+  "source_panel_size": 21,
+  "validation": {
+    "direct_page_navigation": "See ui-page-jump-v3.json for existing Chrome verification",
+    "node_explorer_tests": "passed",
+    "original_frozen_source_and_score_validation": "Retained historical reports; no data changes for release",
+    "python_fixture_tests": 7,
+    "python_status": "passed"
+  }
+}
