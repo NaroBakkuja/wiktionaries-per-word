@@ -1,63 +1,52 @@
 # Wiktionaries per Word
 
-Dated, reproducible rankings of exact written forms **within each entry language**, by the number of distinct Wiktionary editions containing a direct entry attributed to that language.
+This dataset counts how many Wiktionary editions contain a direct entry for an exact written form in a particular entry language. The idea is to use that coverage as a reasonable **prima facie proxy for the relative usefulness of learning a word** to understand or speak the language.
 
-The main count includes the language’s own edition on equal terms. Each edition contributes at most one vote, regardless of repeated senses, parts of speech or etymologies. This measures observed cross-edition coverage, not frequency, quality or importance.
+The score measures editorial coverage, not corpus frequency or empirically validated learning utility. Basic-word lists, shared editorial sources and uneven edition coverage can bias the rankings.
 
-**Private first version.** No public site or release is enabled. The first snapshot contains **21,849,856 exact language/form pairs across 7,072 raw entry-language codes**, from **38,770,932 records in 21 retained Kaikki archives**. All source checks, complete historical EN/VI comparisons, all-row rank/count validation and a byte-identical second full score build passed. See [validation evidence](validation/full-scores.json). No master dictionary or extension is changed.
+My informal impression is that the rankings generally look useful. One counterexample in the English-entry snapshot is `abase`: 20 editions, tied rank 32, above `now`: 19 editions, tied rank 458. This illustrates a limitation; it is not offered as representative of overall ranking quality. No systematic evaluation establishes how common such cases are.
 
-See [the first snapshot and measured downloads](docs/FIRST-SNAPSHOT.md).
+**One-time snapshot, assembled 2026-10-23. This project is unmaintained. No support, updates or future-schema compatibility are promised.**
 
-## Data comes first
+## Download and explore
 
-The universe is the union of every qualifying `(raw language code, exact written form)` in the panel. It is not limited to a gloss vocabulary. No gloss text appears in scores, evidence exports or the explorer.
+[Download the snapshot](https://github.com/NaroBakkuja/wiktionaries-per-word/releases/tag/2026-10-23). Choose:
 
-- Full and per-language **CSV.gz scores**: count, competition tied rank, contributing edition IDs, edition mask, separately named `foreign_only_count`, and raw record count.
-- Full and per-language **CSV.gz evidence**: language, exact word, edition, first raw JSONL line and number of matching raw records. The first line is a reproducible pointer; it is not a claim that only one record exists.
-- **Portable SQLite.gz**: all scores, language labels, explicit source processing states and frozen provenance.
-- A **static HTML explorer** with common/recent language choices, full language search, snapshot selection, exact/prefix word search, global alphabetical word/count/rank sorting, stable pagination with 25–500 entries per page, evidence details, downloads and bookmarkable URLs.
+- **`wiktionaries-per-word-2026-10-23-explorer.zip`**: the complete static explorer, all language data, per-language downloads, provenance and file checksums.
+- **`full-scores.csv.gz`** (98.9 MB): all word counts, tied ranks and contributing edition IDs.
+- **`full-evidence.csv.gz`** (236.9 MB): contributing editions and original JSONL line pointers.
+- **`full-scores.sqlite.gz`** (327.3 MB): a portable database containing scores and provenance.
 
-Large inputs and generated data stay outside Git history. On this machine the source checkout is `D:/Projects/wiktionaries-per-word`; working data, temporary files and checkpoints are `D:/Projects/wiktionaries-per-word-data`. Original October archives remain in their existing D: location. A checksum-verified retained copy of the September English archive is on D:; its original is unchanged.
+The release also includes the source manifest, data notice, opening instructions and `SHA256SUMS.txt`. Large data files are release downloads, not part of the Git checkout. Sizes above use decimal MB.
 
-## Snapshot and interpretation
+To use the explorer, unzip it, open a terminal in the extracted folder and run:
 
-The fixed panel is `cs de el en es fr id it ja ko ku ms nl pl pt ru simple th tr vi zh`. Source editions and entry languages are independent axes. The panel covers thousands of entry-language codes, not just 21 languages.
-
-Snapshot assembly is dated **2026-10-23**. English uses the retained **2026-09-02 dump / 2026-09-20 extraction**. Other sources use **October 1–2 dumps / October 16–18 extractions**. Exact per-source dates, retrieval evidence, sizes, SHA-256 and expected language distributions are frozen in [the manifest](manifests/2026-10-23-first.json). Assembly does not make these sources contemporaneous.
-
-Exact identity preserves case, diacritics, Unicode combining sequences, spaces, punctuation and scripts. **No Unicode normalization** is applied. `á` and `a` + combining acute remain distinct; `zh`, `cmn` and `yue` remain distinct. Explicit forms, abbreviations, proper names and symbols count if they are direct entries. Nested translations, interwiki links and nested form lists do not create entries. Explicit `unknown` language tags and unscoped redirects are excluded with diagnostics. Other raw codes, including `mul` and the explicit `und` category, are retained verbatim. There are 111 whitespace/nonstandard-code diagnostics; raw code buckets are not a claim of 7,072 standardized natural languages.
-
-Tied rank uses competition ranking: `1 + number of forms in the same language with a strictly larger count` (1, 1, 3). The optional foreign-only comparison excludes only the panel edition with the identical language code; Simple English remains a separate vote as in the previous EN audit. There is no macrolanguage mapping.
-
-A complete processing state means the entire retained extraction passed checks. An absent direct entry is **not observed in that extraction**, not proof of absence from live Wiktionary. Failed/unprocessed sources are unknown, never zero; final snapshots require all sources complete unless an explicitly labelled partial diagnostic is requested.
-
-## Rebuild locally
-
-Python 3.11+ standard library; Node 18+ with full ICU for display-order indexes and offline JavaScript tests (first UI index build: Node 24.19.0, ICU 78.3). No package installation, paid APIs, models or live data fetches are required.
-
-```powershell
-$env:TEMP='D:/Projects/wiktionaries-per-word-data/tmp'
-$env:TMP=$env:TEMP
-$env:SQLITE_TMPDIR=$env:TEMP
-python -X utf8 -m unittest discover -s tests -v
-node tests/web.test.mjs
-
-python -X utf8 -m wpw.pipeline ingest --manifest manifests/2026-10-23-first.json --paths D:/Projects/wiktionaries-per-word-data/paths.json --database D:/Projects/wiktionaries-per-word-data/presence.sqlite --checkpoints D:/Projects/wiktionaries-per-word-data/checkpoints
-python -X utf8 -m wpw.pipeline score --database D:/Projects/wiktionaries-per-word-data/presence.sqlite --output D:/Projects/wiktionaries-per-word-data/scores.sqlite
-python -X utf8 -m wpw.export --scores D:/Projects/wiktionaries-per-word-data/scores.sqlite --presence D:/Projects/wiktionaries-per-word-data/presence.sqlite --output D:/Projects/wiktionaries-per-word-data/artifacts/2026-10-23-first --web web
-node scripts/build_ui_indexes.mjs --root D:/Projects/wiktionaries-per-word-data/artifacts/2026-10-23-first
+```sh
+python -m http.server 8765 --bind 127.0.0.1
 ```
 
-`paths.json` maps each panel edition ID to a local `.jsonl` or `.jsonl.gz` path (see [the example](docs/paths.example.json)); it stays outside Git. The first frozen manifest pins gzip bytes. A decompressed JSONL input needs its own manifest checksum and byte size. Source URLs are discovery/provenance links, not an instruction to use whatever bytes they serve today. Keep the original archives: mutable upstream download URLs cannot guarantee historical rebuilds.
+Open <http://127.0.0.1:8765/>. Use `python3` if that is your Python command. Choose an entry language, search an exact spelling or prefix, sort columns globally, and enter a page number to jump directly. The page size is configurable. No regeneration or Node installation is needed to browse the snapshot. Direct `file://` opening is unsupported; the static files need an HTTP server. There are no accounts, analytics or live upstream data requests.
 
-Ingestion resumes complete editions only and rolls back all votes for a failed edition. Changing a frozen manifest requires a new derived database. Score and export commands refuse to overwrite snapshots. For fresh rebuilds, choose new output paths; do not delete retained checkpoints.
+CSV files are UTF-8 gzip files; decompress them with a gzip-capable tool and import spellings as text. SQLite users should decompress the `.sqlite.gz` file. Language filenames inside the ZIP are mapped by `snapshots/2026-10-23-first/languages.json`.
 
-Serve a staged artifact folder with a **local static file server**, then open its `index.html`:
+## What the snapshot contains
 
-```powershell
-python -m http.server 8765 --bind 127.0.0.1 --directory D:/Projects/wiktionaries-per-word-data/artifacts/2026-10-23-first
-```
+**21,849,856 exact language/form pairs**, in **7,072 raw language-code buckets**, from **38,770,932 records** across these 21 editions:
 
-This serves static files only; there is no application backend. The explorer fetches packaged chunks, never upstream live entries. Direct `file://` loading is not supported by browser module/worker security rules. The UI update was checked in the existing Chrome tab through the supported browser extension. No blocked browser executable was launched. See [the UI validation record](validation/ui-pagination-v2.json) and [direct page-jump checks](validation/ui-page-jump-v3.json).
+`cs de el en es fr id it ja ko ku ms nl pl pt ru simple th tr vi zh`
 
-See [methodology and schema](docs/METHODOLOGY.md), [rebuilding and compatibility](docs/REBUILDING.md), [validation](docs/VALIDATION.md), and [licensing and attribution](LICENSE.md). No public code license or derived-data dedication has been chosen.
+Each edition contributes at most one vote per language/form, including the language's own edition. Repeated senses, parts of speech and etymologies do not add votes. Translation mentions, interwiki links and nested form lists do not count. Explicit top-level form entries do. Equal counts share competition rank: 1, 1, 3. `foreign_only_count` is a separately named comparison.
+
+Entry languages and source editions are independent. All qualifying entry languages are included; the raw-code bucket count is not a claim of 7,072 standardized natural languages. Case, accents, combining sequences, scripts and spellings are preserved without Unicode normalization or code/variant merging. No gloss text is included.
+
+The English source uses a September 2 dump and September 20 extraction; the others use October 1-2 dumps and October 16-18 extractions. Assembly does not synchronize those dates. All retained extractions passed processing checks, but extraction omissions remain possible. Absence means not observed in those files; failed or unprocessed coverage is unknown, not zero. Exact dates, URLs, hashes and source distributions are in the [frozen manifest](manifests/2026-10-23-first.json).
+
+## Method and code
+
+The Python standard-library pipeline streams raw Kaikki JSONL/gzip, deduplicates `(entry language, written form, edition)`, and computes counts and tied ranks. It exports CSV, evidence, SQLite and static chunks; a Node script builds language-aware display ordering. It does not require a private database or post-processed Kaikki downloads.
+
+[Rebuilding instructions](docs/REBUILDING.md) describe the input contract and commands. Exact historical regeneration requires the matching original archives and recorded versions; those archives are not included, and current upstream URLs may serve newer bytes. Later raw extracts can be processed with a new reviewed manifest, but will produce a new snapshot. The code is supplied as-is, without an update service.
+
+See [methodology and schema](docs/METHODOLOGY.md), [validation](docs/VALIDATION.md), [licensing](LICENSE.md) and [source attribution](NOTICE.md).
+
+Original project contributions and any compilation rights held by the publisher are dedicated under CC0, without a project attribution requirement. Third-party rights remain separate; the dedication does not declare all upstream data public domain.

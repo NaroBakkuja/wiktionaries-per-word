@@ -15,7 +15,7 @@ def export(scores,presence,output,web,chunk_size=2000):
     meta=dict(c.execute('SELECT * FROM meta'));m=json.loads(meta['manifest']);panel=m['panel'];sid=m['snapshot_id']
     for f in Path(web).iterdir():
         if f.is_file():shutil.copyfile(f,root/f.name)
-    for name in ['LICENSE.md','docs/METHODOLOGY.md','docs/REBUILDING.md']:
+    for name in ['LICENSE.md','LICENSE-CC0.txt','NOTICE.md','docs/METHODOLOGY.md','docs/REBUILDING.md']:
         source=Path(web).resolve().parent/name
         if source.exists():
             dest=root/'documentation'/Path(name).name;dest.parent.mkdir(exist_ok=True);shutil.copyfile(source,dest)

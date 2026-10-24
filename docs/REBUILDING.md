@@ -1,33 +1,49 @@
-# Rebuilding and compatibility
+# Rebuilding the dated snapshot
 
-## Supported upstream contract
+The code reads raw Kaikki/Wiktextract JSONL: one UTF-8 JSON object per line, optionally gzip-compressed. Required entry fields are nonempty top-level strings `word` and `lang_code`; optional `lang` supplies a display label. Nested translations/forms do not create entries. Unscoped redirects are recognized only when both identity fields are absent and string `title` and `redirect` fields are present. Other missing identities, NUL and unpaired surrogates fail the source. Irrelevant additive fields are ignored.
 
-Adapter `kaikki-jsonl-v1` supports one JSON object per UTF-8 line, optionally gzip-compressed. A direct entry requires nonempty string `word` and `lang_code`. Unscoped page redirects are recognized only when both entry identity fields are absent and string `title` and `redirect` are present. Other missing/invalid identity fields fail the edition with its line number. NUL and unpaired surrogates fail. Additive and irrelevant nested fields are tolerated and ignored.
+The announced removal of post-processed downloads does not require an importer change: this project already uses complete raw extracts. See the [upstream announcement](https://github.com/tatuylonen/wiktextract/issues/1178) and [raw-download documentation](https://kaikki.org/dictionary/rawdata.html). Source edition is assigned by the manifest; `lang_code` is the entry language, not the source edition.
 
-The manifest freezes archive byte length and SHA-256, expected physical record count, expected records per raw language code, expected unscoped redirects, optional decompressed SHA-256, URLs, dump/extraction/retrieval dates, exact panel, policy and adapter versions. All frozen distributions must match exactly. Counts and hashes are verified before accepting an edition. This contract does not guarantee compatibility with future upstream schemas.
+## Requirements and inputs
 
-For a new source vintage, inspect and census candidate bytes first using `python -m wpw.inspect --archive PATH --output REPORT.json`. Review missing identity fields, language counts, newly appearing/disappearing codes, major distribution changes and representative source samples against the previous manifest. Only then create a distinct dated manifest and derived database. Do not silently update a frozen manifest to make failures pass. A newly approved dataset’s different SHA-256 does not establish schema compatibility by itself. Add a new versioned adapter and fixtures if meaning or structure changes.
+Python 3.11+ standard library and Node 18+ with full ICU. No pip/npm packages, paid services or API keys are required. The recorded build used Python 3.14.7, SQLite 3.50.4 and zlib 1.3.1.zlib-ng; display indexes used Node 24.19.0 and ICU 78.3. Other supported-version combinations were not all tested.
 
-## Layers and storage
+Use the source attached to release tag `2026-10-23`. For the historical snapshot, obtain the exact archives described by `manifests/2026-10-23-first.json`. The release distributes derived scores/evidence, not the original extraction archives. Current download URLs are provenance/discovery links and do not guarantee historical bytes. Exact historical reconstruction requires retained copies matching the hashes. See `validation/build-provenance.json` for the original pipeline revision and code hashes.
 
-1. **Original extraction archives**: gzip JSONL with Kaikki/Wiktextract output. Preserve whole original bytes and checksums outside Git. The existing October archives remain retained on D:. English has a new retained D: copy; its C: original is unchanged.
-2. **Derived presence database**: deduplicated `(language,word,edition)` with count and first line. Created from one streaming pass per archive. It contains no glosses and requires no private audit database schema.
-3. **Final snapshots**: full/per-language score and evidence CSV.gz, portable SQLite.gz, metadata, and static explorer chunks. Staged locally for review, without publishing a release.
+Copy `docs/paths.example.json` to a local `paths.json` and replace every placeholder with the corresponding archive location. Relative paths are resolved from the working directory where the command runs. Do not confuse an edition's complete multilingual extract with entries in just that edition's own language. Keep archives, derived presence data and final scores as separate layers.
 
-Temporary sort/journal files must stay on D: on this machine. Set `TEMP`, `TMP` and `SQLITE_TMPDIR` to the adjacent data directory before running. Inspect free disk before full builds. Do not move existing work or delete source archives to make room.
+Choose a new output directory with sufficient free space. Full builds require several GB beyond the retained inputs. Set `TEMP`, `TMP` and `SQLITE_TMPDIR` to a suitable working directory on a drive with room for intermediate SQLite files. Do not overwrite retained snapshots.
 
-SQLite works with bounded memory and an indexed compact intermediate. Each edition is one transaction. A failed source leaves explicit `failed` state and no partial presences; a future invocation retries that source. Interrupted sources remain `processing` until retried. Complete source checkpoints are immutable for the frozen manifest. A process exception reports the exact source and line/check failure.
+## Commands
 
-## Reproducibility
+Run from the repository root. Use `python3` instead of `python` where appropriate.
 
-Source order is the frozen panel. Identity and ordering use raw strings. Score ties and mask encoding are explicit. Exports use sorted rows, stable filenames and gzip mtime 0. Content hashes in `artifact-inventory.json` cover every distributed file; the inventory itself is deliberately not self-referential. A canonical sorted-row SHA-256 is also stored, because SQLite file bytes can vary with SQLite version or runtime implementation even when rows agree. Exact byte-identical gzip requires the same Python/zlib implementation; logical row determinism is the cross-runtime guarantee.
+```sh
+python -m unittest discover -s tests -v
+node tests/web.test.mjs
+python -c "from pathlib import Path; Path('work').mkdir(exist_ok=True)"
+python -m wpw.pipeline ingest --manifest manifests/2026-10-23-first.json --paths paths.json --database work/presence.sqlite --checkpoints work/checkpoints
+python -m wpw.pipeline score --database work/presence.sqlite --output work/scores.sqlite
+python -m wpw.validate scores --database work/scores.sqlite --output work/score-validation.json
+python -m wpw.export --scores work/scores.sqlite --presence work/presence.sqlite --output work/explorer --web web
+node scripts/build_ui_indexes.mjs --root work/explorer
+python -m http.server 8765 --bind 127.0.0.1 --directory work/explorer
+```
 
-The completed build record includes code file hashes, Git revision, Python/SQLite versions and checksums of validation reports. Rebuild archived snapshots using that code revision and original source bytes, not a current upstream download. There is no network updater or scheduled acquisition.
+Open <http://127.0.0.1:8765/>. The JavaScript tests and Python fixtures are small; the full commands require all matching source archives. `scripts/build.ps1` is an optional PowerShell wrapper. The exporter and scoring command refuse to overwrite existing outputs. Ingestion resumes completed editions and rolls back a failed edition; a partial source never contributes partial votes.
 
-The explorer source is in `web/`. `wpw.export` assembles it with data outside Git. Serve that folder as static files on localhost for review. The original build used source, worker and DOM-contract checks. The later explorer update also passed checks in the existing Chrome tab through the supported browser extension; no blocked browser executable was launched. No public hosting, Pages, release or analytics is configured.
+## Other input vintages
 
-## Display ordering indexes
+For each new raw extract, run `python -m wpw.inspect --archive INPUT.jsonl.gz --output CENSUS.json`. Review sample identities, invalid records, language distributions and source dates. Create a distinct manifest with the exact source panel, URLs, dates, archive sizes/SHA-256, expected records/languages/redirects, and supported adapter/policy versions; supply a corresponding paths file and new database. The tests in `tests/test_pipeline.py` provide small manifest examples.
 
-After `wpw.export`, run `node scripts/build_ui_indexes.mjs --root ARTIFACT_FOLDER`. This reads only frozen word chunks, verifies their hashes and writes display-only row permutations under `ui-indexes/`. It never reprocesses the raw archives or changes snapshot counts, downloads or source metadata. Use the recorded Node/ICU versions for an identical collation rebuild. Unsupported raw codes use Unicode scalar order, explicitly labelled in the explorer. `scripts/build.ps1` performs this step for a new full build.
+Do not edit the historical manifest just to make a mismatch pass. Checksums and frozen distributions must match before an edition is accepted. A changed checksum alone does not prove schema compatibility. Renamed required fields or other unsupported formats require code changes and tests. No compatibility with every future schema or automatic acquisition is promised.
 
-For an existing served snapshot, update the files from `web/`, generate the supplemental indexes, then run `python scripts/checkpoint_ui.py --root ARTIFACT_FOLDER --checkpoint CHECKPOINT_FOLDER --verify-frozen`. The checkpoint folder must already contain the previous `artifact-inventory.json`; it serves as the immutable baseline. The updater refreshes UI file checksums and adds supplemental index entries while retaining all frozen snapshot file records. It does not repack the original private ZIP. Refresh the browser with Ctrl+F5 after a live UI update.
+## Reproducibility and evidence
+
+The original archives retain full source records. `presence.sqlite` is a deduplicated intermediate with one row per language/form/edition, record counts and original first-line pointers. Final score/evidence files contain no glosses. Each layer has its own provenance.
+
+Sorted rows, fixed panel order, gzip mtime 0 and explicit rank/mask policies make output deterministic. `artifact-inventory.json` covers every packaged file except itself. Canonical row SHA-256 is the cross-runtime comparison; exact SQLite/gzip bytes also depend on recorded runtime versions. Source hashes and physical JSONL line pointers provide historical evidence; links in the explorer open current pages.
+
+Display indexes are separate row permutations over frozen chunks. Building them checks chunk hashes and does not alter scores or evidence. Reuse the recorded Node/ICU versions for identical collation. The release packaging helper targets this first snapshot and never publishes or contacts GitHub.
+
+This is a one-time, unmaintained release. There is no update schedule or support commitment.

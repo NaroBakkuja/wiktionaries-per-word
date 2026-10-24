@@ -1,1 +1,23 @@
-{"cs":"D:/archives/cs-extract.jsonl.gz","en":"D:/archives/en-extract.jsonl.gz","vi":"D:/archives/vi-extract.jsonl.gz"}
+{
+  "cs": "../archives/cs-raw.jsonl.gz",
+  "de": "../archives/de-raw.jsonl.gz",
+  "el": "../archives/el-raw.jsonl.gz",
+  "en": "../archives/en-raw.jsonl.gz",
+  "es": "../archives/es-raw.jsonl.gz",
+  "fr": "../archives/fr-raw.jsonl.gz",
+  "id": "../archives/id-raw.jsonl.gz",
+  "it": "../archives/it-raw.jsonl.gz",
+  "ja": "../archives/ja-raw.jsonl.gz",
+  "ko": "../archives/ko-raw.jsonl.gz",
+  "ku": "../archives/ku-raw.jsonl.gz",
+  "ms": "../archives/ms-raw.jsonl.gz",
+  "nl": "../archives/nl-raw.jsonl.gz",
+  "pl": "../archives/pl-raw.jsonl.gz",
+  "pt": "../archives/pt-raw.jsonl.gz",
+  "ru": "../archives/ru-raw.jsonl.gz",
+  "simple": "../archives/simple-raw.jsonl.gz",
+  "th": "../archives/th-raw.jsonl.gz",
+  "tr": "../archives/tr-raw.jsonl.gz",
+  "vi": "../archives/vi-raw.jsonl.gz",
+  "zh": "../archives/zh-raw.jsonl.gz"
+}

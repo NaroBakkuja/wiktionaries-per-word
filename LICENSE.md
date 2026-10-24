@@ -1,15 +1,11 @@
-# Licensing and attribution status
+# Scope of the CC0 dedication
 
-No public license has been selected for the original code in this repository. Its private creation does not grant a public open-source license. MIT or Apache-2.0 are possible code-license choices for a later owner decision; neither is applied here.
+The publisher of this release, GitHub user **NaroBakkuja**, makes this dedication:
 
-Source data has separate upstream rights. Credit **Wiktionary contributors**, **Kaikki.org**, and **Wiktextract**. Source edition URLs, dump/extraction dates, exact archive hashes, language attribution and source-line evidence are retained. Live Wiktionary page links provide a route to page histories, but do not establish the historical revision in an extraction by themselves. No media or gloss content is redistributed in score/evidence outputs.
+To the extent I hold copyright, related rights or database rights in the original project code, original project documentation, or generated word-presence/count compilation, I apply **CC0 1.0 Universal** to those rights. I waive them to the greatest extent legally possible, with CC0's public-license fallback where the waiver is ineffective. I impose no attribution requirement to me or this project.
 
-Wikimedia’s [Terms of Use, section 7](https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use#7._Licensing_of_Content) describes text licensing under CC BY-SA 4.0 and, where applicable, GFDL, with edition-specific exceptions and requirements to retain relevant attribution and additional notices. Reusers must examine applicable source terms rather than assume a blanket license. This repository does not replace those terms.
+The complete, unmodified legal text is in [LICENSE-CC0.txt](LICENSE-CC0.txt), obtained from [Creative Commons' official legal-tools repository](https://github.com/creativecommons/cc-legal-tools-data/blob/main/docs/publicdomain/zero/1.0/legalcode.txt). The [canonical legal code](https://creativecommons.org/publicdomain/zero/1.0/legalcode.en) is also available online. This scope statement does not alter that text.
 
-Kaikki’s [raw-download documentation](https://kaikki.org/dictionary/rawdata.html) identifies Wiktextract as the extractor and distinguishes raw JSONL from postprocessed dictionaries. The [Wiktextract project](https://github.com/tatuylonen/wiktextract) documents the extraction format. The software’s license is not automatically the license of extracted dictionary data.
+The dedication covers only rights held by the publisher. It does not waive rights held by Wiktionary contributors, Kaikki/Wiktextract contributors or other third parties. It does not label raw extracts, definitions, third-party code or all factual extraction worldwide as public domain. Applicable upstream attribution, licensing and ShareAlike obligations remain where protected rights apply; see [NOTICE.md](NOTICE.md). Bare facts and uses that do not require permission are not restricted by this notice.
 
-Do not label the derived counts or evidence CC0 merely because they contain counts. The treatment of facts, selection/arrangement, database rights and any retained protected expression needs a deliberate distribution decision. A later release may use upstream-compatible notices/terms for data, and a separate license for original code. Verify per-edition exceptions and attribution obligations before public release. No unchosen dedication or public data-license grant is made here; upstream rights remain with their respective holders.
-
-The private repository and locally staged artifacts are for review. The build modifies the source representation into deduplicated presence/count/rank data and explicitly documents those transformations. This note records the current decision boundary, not a legal determination that all derived material is unprotected.
-
-References reviewed on 2026-10-23. Original extraction archives are retained locally with hashes and are not blindly mirrored into Git or GitHub releases.
+CC0 does not waive patent or trademark rights. The release is provided as-is, without a maintenance, support or update commitment.

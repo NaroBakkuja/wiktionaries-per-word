@@ -9,3 +9,7 @@ data/
 *.csv.gz
 *.zip
 node_modules/
+
+# Local rebuild configuration and generated outputs
+paths.json
+work/

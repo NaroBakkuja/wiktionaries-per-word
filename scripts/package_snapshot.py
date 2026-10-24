@@ -1,4 +1,4 @@
-"""Finalize a private local bundle. Never publishes or contacts GitHub."""
+"""Package the dated snapshot locally. Never publishes or contacts GitHub."""
 import argparse,hashlib,json,platform,shutil,sqlite3,subprocess,sys,zipfile
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
@@ -15,7 +15,7 @@ def package(root,archive):
         p=root/f['path'];assert p.stat().st_size==f['bytes'] and sha256(p)==f['sha256'],f['path']
     for p in (repo/'web').iterdir():
         if p.is_file():shutil.copyfile(p,root/p.name)
-    for p in [repo/'LICENSE.md',repo/'docs/METHODOLOGY.md',repo/'docs/REBUILDING.md',repo/'docs/VALIDATION.md']:
+    for p in [repo/'LICENSE.md',repo/'LICENSE-CC0.txt',repo/'NOTICE.md',repo/'docs/FIRST-SNAPSHOT.md',repo/'docs/METHODOLOGY.md',repo/'docs/REBUILDING.md',repo/'docs/VALIDATION.md']:
         shutil.copyfile(p,root/'documentation'/p.name)
     (root/'validation').mkdir(exist_ok=True)
     for p in (repo/'validation').glob('*.json'):
@@ -34,7 +34,7 @@ def package(root,archive):
             with z.open(info,'w',force_zip64=True) as dst,p.open('rb') as src:shutil.copyfileobj(src,dst,8<<20)
     with zipfile.ZipFile(archive) as z:
         bad=z.testzip();assert bad is None,bad
-    result=dict(status='locally_staged_private_not_published',archive=archive.name,archive_bytes=archive.stat().st_size,archive_sha256=sha256(archive),zip_crc_check='passed',artifact_files=len(files),uncompressed_staged_bytes=inventory['total_bytes'],words=inventory['words'],raw_language_codes=inventory['languages'],canonical_rows_sha256=inventory['canonical_rows_sha256'])
+    result=dict(status='locally_packaged',archive=archive.name,archive_bytes=archive.stat().st_size,archive_sha256=sha256(archive),zip_crc_check='passed',artifact_files=len(files),uncompressed_staged_bytes=inventory['total_bytes'],words=inventory['words'],raw_language_codes=inventory['languages'],canonical_rows_sha256=inventory['canonical_rows_sha256'])
     write_json(repo/'validation/delivery.json',result);write_json(archive.with_suffix('.json'),result);print(json.dumps(result,indent=2))
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--root',required=True);p.add_argument('--archive',required=True);a=p.parse_args();package(a.root,a.archive)

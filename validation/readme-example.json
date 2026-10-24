@@ -1,0 +1,22 @@
+{
+  "assembled_on": "2026-10-23",
+  "entry_language": "en",
+  "examples": [
+    {
+      "count": 20,
+      "foreign_only_count": 19,
+      "tied_rank": 32,
+      "word": "abase"
+    },
+    {
+      "count": 19,
+      "foreign_only_count": 18,
+      "tied_rank": 458,
+      "word": "now"
+    }
+  ],
+  "interpretation": "Illustrative counterexample only; no representativeness or rarity claim.",
+  "score": "inclusive distinct edition count",
+  "snapshot_id": "2026-10-23-first",
+  "verification": "Read-only exact-form query against validated scores.sqlite"
+}
