@@ -58,6 +58,6 @@ Serve a staged artifact folder with a **local static file server**, then open it
 python -m http.server 8765 --bind 127.0.0.1 --directory D:/Projects/wiktionaries-per-word-data/artifacts/2026-10-23-first
 ```
 
-This serves static files only; there is no application backend. The explorer fetches packaged chunks, never upstream live entries. Direct `file://` loading is not supported by browser module/worker security rules. The UI update was checked in the existing Chrome tab through the supported browser extension. No blocked browser executable was launched. See [the UI validation record](validation/ui-pagination-v2.json).
+This serves static files only; there is no application backend. The explorer fetches packaged chunks, never upstream live entries. Direct `file://` loading is not supported by browser module/worker security rules. The UI update was checked in the existing Chrome tab through the supported browser extension. No blocked browser executable was launched. See [the UI validation record](validation/ui-pagination-v2.json) and [direct page-jump checks](validation/ui-page-jump-v3.json).
 
 See [methodology and schema](docs/METHODOLOGY.md), [rebuilding and compatibility](docs/REBUILDING.md), [validation](docs/VALIDATION.md), and [licensing and attribution](LICENSE.md). No public code license or derived-data dedication has been chosen.

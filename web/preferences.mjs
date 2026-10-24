@@ -12,6 +12,12 @@ export function parseState(url,preferredSize=50) {
   if(!['prefix','exact'].includes(s.mode))s.mode='prefix';
   return s;
 }
+// The UI uses one-based page numbers; URL and worker state remain zero-based.
+export function pageTarget(value,total,size,current=0){
+  const pages=Math.ceil(total/size),text=String(value).trim();
+  if(!/^-?\d+$/.test(text)||!Number.isFinite(Number(text)))return null;
+  return Math.max(0,Math.min(Math.max(0,pages-1),Number(text)-1));
+}
 export function resizedPage(page,oldSize,newSize){return Math.floor(page*oldSize/newSize);}
 export function rememberLanguage(recent,code){return [code,...recent.filter(x=>x!==code)].slice(0,6);}
 export function languageGroups(languages,recent,current) {

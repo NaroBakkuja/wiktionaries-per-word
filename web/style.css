@@ -12,3 +12,10 @@ html{overflow-anchor:none}
 #language-results{display:block;width:100%;margin:14px 0;min-height:280px;font-size:15px}
 #language-dialog input{width:100%}
 @media(max-width:650px){.table-toolbar{align-items:flex-start;flex-direction:column;gap:10px}}
+
+.table-toolbar{flex-wrap:wrap}
+#page-jump{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0;font-size:13px}
+#page-number{width:6.5em;font-variant-numeric:tabular-nums}
+#page-total{white-space:nowrap}
+#page-error:not(:empty){flex-basis:100%;color:#963b25}
+#page-number[aria-invalid="true"]{border-color:#963b25}

@@ -1,0 +1,22 @@
+{
+  "automated": "node tests/web.test.mjs passed; existing Vietnamese collation, global order, viewport and URL tests plus direct-page invalid/range/empty/filter-state cases",
+  "browser": {
+    "bookmark_reload": "Same filter, order, size and page restored",
+    "empty": "Page 0 of 0; input, Go, Previous and Next disabled",
+    "filtered_jump": "Japanese prefix U+3042; word ascending; 25 rows/page; page 20 of 99; 476-500 of 2467",
+    "final_view": "Restored Japanese count descending, no word filter, 500 rows/page, page 8 of 649",
+    "invalid": "abc rejected with accessible inline error; current page unchanged",
+    "keyboard_page_20": "Japanese, 500 rows/page: 9501-10000 of 324142; URL page=19",
+    "lower_clamp": "-20 -> page 1",
+    "previous_next": "20 -> 21 -> 20; scrollY 1677.3333740234375 unchanged between page updates",
+    "route": "Existing Chrome via supported browser extension; no browser executable launched",
+    "scroll_after": 289.3333435058594,
+    "scroll_before": 289.3333435058594,
+    "upper_clamp": "999999 -> page 649; 142 rows; Next disabled"
+  },
+  "checked_on": "2026-10-24",
+  "publication": "No upload, release or visibility change",
+  "snapshot": "2026-10-23-first",
+  "snapshot_data": "Unchanged. Four served UI files and their inventory records updated; no raw rebuild or reindex.",
+  "version": "explorer-page-jump-v3"
+}

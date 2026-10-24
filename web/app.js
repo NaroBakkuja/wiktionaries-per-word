@@ -1,4 +1,4 @@
-import {PAGE_SIZES,parseState,resizedPage,rememberLanguage,languageGroups,searchLanguages} from './preferences.mjs?v=2';
+import {PAGE_SIZES,parseState,resizedPage,pageTarget,rememberLanguage,languageGroups,searchLanguages} from './preferences.mjs?v=3';
 import {ViewportKeeper} from './viewport.mjs?v=2';
 const $=id=>document.getElementById(id),fmt=n=>n.toLocaleString();
 const readPreference=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}};
@@ -12,7 +12,8 @@ const worker=new Worker('worker.js?v=2',{type:'module'});
 function node(tag,text){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;}
 function save(){const u=new URL(location.href);for(const[k,v]of Object.entries(state))u.searchParams.set(k,v);history.replaceState(null,'',u);}
 async function json(url){const r=await fetch(url);if(!r.ok)throw Error(`Cannot load static file: ${url}`);return r.json();}
-function error(e){viewport.cancel();$('results-region').removeAttribute('aria-busy');$('status').textContent=e.message||String(e);$('previous').disabled=true;$('next').disabled=true;}
+function lockJump(locked){$('page-number').disabled=locked;$('page-go').disabled=locked;}
+function error(e){lockJump(true);viewport.cancel();$('results-region').removeAttribute('aria-busy');$('status').textContent=e.message||String(e);$('previous').disabled=true;$('next').disabled=true;}
 function download(id,url){const a=$(id);a.href=url;a.setAttribute('download','');}
 function languageLabel(l){const code=l.code===l.code.trim()?l.code:JSON.stringify(l.code);return `${l.name} · ${code}`;}
 function populateLanguages(){
@@ -47,7 +48,7 @@ function run({paging=false}={}){
     selected=languages.find(l=>l.code===state.lang);if(!selected)throw Error('Choose an entry language.');
     pendingView=viewport.begin(paging);$('status').textContent='Loading results…';$('results-region').setAttribute('aria-busy','true');
     // Keep the previous rows in place. Clearing them here collapses the page and moves the viewport.
-    $('previous').disabled=true;$('next').disabled=true;save();
+    $('previous').disabled=true;$('next').disabled=true;lockJump(true);save();
     worker.postMessage({...state,id:++requestId,base:base+'languages/'+selected.id,uiBase:new URL(`ui-indexes/${state.snapshot}/${selected.id}`,location.href).href});
     for(const th of document.querySelectorAll('[data-column]')){const active=th.dataset.column===state.sort;th.setAttribute('aria-sort',active?(state.dir==='asc'?'ascending':'descending'):'none');th.querySelector('span').textContent=active?(state.dir==='asc'?' ↑':' ↓'):'';}
   }catch(e){error(e);}
@@ -69,6 +70,9 @@ function render(rows,collation){
   $('rows').replaceChildren(...rows.map(r=>{const tr=node('tr');tr.append(node('td',r[0]),node('td',r[1]),node('td',fmt(r[2])));const td=node('td'),b=node('button',contributors(r[3]).join(' · '));b.className='edition-button';b.title='View contributing editions';b.onclick=()=>details(r,displayed);td.append(b);tr.append(td);return tr;}));
   $('page-status').textContent=total?`${fmt(state.page*state.size+1)}–${fmt(Math.min(total,(state.page+1)*state.size))} of ${fmt(total)}`:'No matching direct entries observed';
   $('previous').disabled=state.page===0;$('next').disabled=(state.page+1)*state.size>=total;
+  const pages=Math.ceil(total/state.size);
+  $('page-number').value=String(total?state.page+1:0);$('page-total').textContent=`of ${fmt(pages)}`;
+  $('page-number').setAttribute('aria-invalid','false');$('page-error').textContent='';lockJump(!total);
   $('source-rows').replaceChildren(...manifest.sources.map(s=>{const cv=currentIndex.coverage.find(x=>x.edition===s.id),tr=node('tr');for(const text of [s.id,s.dump_date,s.extraction_date,s.retrieval_date,cv.status,cv.entry_records===null?'Unknown':fmt(cv.entry_records)])tr.append(node('td',text));return tr;}));
   download('download-language',base+'downloads/'+selected.id+'-scores.csv.gz');download('download-evidence',base+'downloads/'+selected.id+'-evidence.csv.gz');download('detail-download',base+'downloads/'+selected.id+'-evidence.csv.gz');
 }
@@ -92,6 +96,12 @@ $('snapshot').onchange=()=>{state.snapshot=$('snapshot').value;state.page=0;load
 $('page-size').replaceChildren(...PAGE_SIZES.map(n=>{const o=node('option',String(n));o.value=String(n);return o;}));
 $('page-size').onchange=()=>{const size=Number($('page-size').value);state.page=resizedPage(state.page,state.size,size);state.size=size;storePreference('wpw.pageSize',size);run();};
 for(const b of document.querySelectorAll('[data-sort]'))b.onclick=()=>{const key=b.dataset.sort;state.dir=state.sort===key?(state.dir==='asc'?'desc':'asc'):(key==='count'?'desc':'asc');state.sort=key;state.page=0;run();};
+$('page-jump').onsubmit=e=>{
+  e.preventDefault();const page=pageTarget($('page-number').value,total,state.size,state.page);
+  if(page===null){$('page-number').setAttribute('aria-invalid','true');$('page-error').textContent='Enter a whole page number.';return;}
+  $('page-number').setAttribute('aria-invalid','false');$('page-error').textContent='';$('page-number').value=String(total?page+1:0);
+  if(page!==state.page){state.page=page;run({paging:true});}
+};
 $('previous').onclick=()=>{state.page--;run({paging:true});};$('next').onclick=()=>{state.page++;run({paging:true});};
 window.onpopstate=()=>{state=parseState(location.href,readPreference('wpw.pageSize',50));loadSnapshot();};
 json('catalog.json').then(c=>{catalog=c;$('snapshot').replaceChildren(...c.snapshots.map(s=>{const o=node('option',s.label);o.value=s.id;return o;}));return loadSnapshot();}).catch(error);
